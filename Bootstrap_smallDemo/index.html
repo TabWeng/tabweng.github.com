@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- 更好地支持IE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 移动优先，自适应手机屏幕-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<title>HW_Demo</title>
+	<!-- 引入bootstrap CSS文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries（解决IE不兼容HTML5的问题）-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://(IE8对媒体查询的支持) -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- 导航条 -->
+<!-- nav 标明了导航区 -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar" aria-expanded="false">
+      	<!-- 必须在这里加个隐藏标签，否则会有错误 -->
+        <span class="sr-only">Toggle navigation</span>
+        <!-- 三条线 -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">童年喜欢的小精灵</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- collapse，在窗口足够小的时候，就自动不显示，整个div隐藏 -->
+    <div class="collapse navbar-collapse" id="demo-navbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#top">首页<span class="sr-only">(current)</span></a></li>
+        <li><a href="#goodSelectSpilit">精选</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">精灵 <span class="caret"></span></a>
+          <!-- dropdown-menu 下拉菜单 -->
+          <ul class="dropdown-menu">
+            <li><a href="#pp0">比卡丘</a></li>
+            <li><a href="#pp1">吉尼龟</a></li>
+            <li><a href="#pp2">妙蛙种子</a></li>
+            <li><a href="#pp3">小火龙</a></li>
+            <li><a href="#pp4">胖丁</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">更多</a></li>
+          </ul>
+        </li>
+        <li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- 轮播效果 -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <!-- 小圆点 -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" id="crl_0">
+      <img src="images/比卡丘海报.jpg" alt="比卡丘">
+      <div class="carousel-caption">
+        <h1>比卡丘</h1>
+        <p class="h4">皮卡丘是一只矮矮胖胖圆乎乎的类啮齿型神奇宝贝，全身的皮毛都是黄色的。</p>
+        <p><button class="btn btn-primary btn-lg myBtn" src="#">收藏本宝宝</button></p>
+      </div>
+    </div>
+    <div class="item"  id="crl_1">
+      <img src="images/吉尼龟海报.png" alt="吉尼龟">
+      <div class="carousel-caption">
+        <h1>吉尼龟</h1>
+        <p class="h4">杰尼龟的样子就像是乌龟，身体是蓝色的，头部很圆，可以提高杰尼龟游泳的速度。</p>
+        <p><button class="btn btn-primary btn-lg myBtn" src="#">收藏本宝宝</button></p>
+      </div>
+    </div>
+    <div class="item"  id="crl_2">
+      <img src="images/妙蛙种子海报.jpg" alt="妙蛙种子">
+      <div class="carousel-caption">
+        <h1>妙蛙种子</h1>
+        <p class="h4">妙蛙种子是一只有点像蟾蜍或蓝绿色皮肤的小恐龙的爬行动物。</p>
+        <p><button class="btn btn-primary btn-lg myBtn" src="#">收藏本宝宝</button></p>
+      </div>
+    </div>
+    <div class="item"  id="crl_3">
+      <img src="images/小火龙海报.jpg" alt="小火龙">
+      <div class="carousel-caption">
+        <h1>小火龙</h1>
+        <p class="h4">小火龙是橙色的爬行动物，像一尾的两足动物蝾螈，有一些恐龙的特征，特别像是那些兽脚亚目食肉恐龙。</p>
+        <p><button class="btn btn-primary btn-lg myBtn" src="#">收藏本宝宝</button></p>
+      </div>
+    </div>
+    <div class="item"  id="crl_4">
+      <img src="images/胖丁海报.jpg" alt="胖丁">
+      <div class="carousel-caption">
+        <h1>胖丁</h1>
+        <p class="h4">胖丁是圆形的粉色球状神奇宝贝，有小的猫耳和大眼睛。胖丁有有弹性的气球状皮肤。</p>
+        <p><button class="btn btn-primary btn-lg myBtn" src="#">收藏本宝宝</button></p>
+      </div>
+    </div>    
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">左切换</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">右切换</span>
+  </a>
+</div>
+
+<!-- 栅格系统 -->
+<div class="container" id="summary-container">
+
+	<!-- 三栏布局 -->
+	<div class="row" id="goodSelectSpilit">
+		<div class="col-md-4 jsMargin">
+			<img src="images/小火龙.png">
+	        <h2>小火龙</h2>
+	        <p class="h4">小火龙是橙色的爬行动物，有一些恐龙的特征，特别像是那些兽脚亚目食肉恐龙。</p>
+        	<p><button class="btn btn-warning btn-lg myBtn" src="#">收藏本宝宝</button></p>		
+		</div>
+		<div class="col-md-4 jsMargin">
+			<img src="images/吉尼龟.png">
+			<h2>吉尼龟</h2>
+        	<p class="h4">杰尼龟的样子就像是乌龟，身体是蓝色的，头部很圆，可以提高杰尼龟游泳的速度。</p>
+        	<p><button class="btn btn-primary btn-lg myBtn" src="#">收藏本宝宝</button></p>
+		</div>	
+		<div class="col-md-4 jsMargin">
+			<img src="images/妙蛙种子.png">
+	        <h2>妙蛙种子</h2>
+	        <p class="h4">妙蛙种子是一只有点像蟾蜍或蓝绿色皮肤的小恐龙的爬行动物。</p>
+	        <p><button class="btn btn-success btn-lg myBtn" src="#">收藏本宝宝</button></p>
+		</div>			
+	</div>
+	<hr class="hrMargin">
+	<!-- 标签页制作 -->
+	<div>
+	  <!-- Nav tabs -->
+	  <ul class="nav nav-tabs" role="tablist" id="tab-list-mainSpilit">
+	    <li role="presentation" class="active"><a href="#pp0" aria-controls="home" role="tab" data-toggle="tab">比卡丘</a></li>
+	    <li role="presentation"><a href="#pp1" aria-controls="profile" role="tab" data-toggle="tab">吉尼龟</a></li>
+	    <li role="presentation"><a href="#pp2" aria-controls="messages" role="tab" data-toggle="tab">妙蛙种子</a></li>
+	    <li role="presentation"><a href="#pp3" aria-controls="settings" role="tab" data-toggle="tab">小火龙</a></li>
+	    <li role="presentation"><a href="#pp4" aria-controls="settings" role="tab" data-toggle="tab">胖丁</a></li>
+	  </ul>
+
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div role="tabpanel" class="tab-pane active" id="pp0">
+	    	<div class="row spilit-type">
+	    		<div class="col-md-7">
+	    			<h2><span class="h1 text-primary">比卡丘</span> 电系神奇精灵</h2>
+	    			<p class="text-justify">皮卡丘和它的家族(皮丘和雷丘)，是唯一可以习得伏特攻击的神奇宝贝。在某些稀少的情况下，皮卡丘还可以学习控制水，在冲浪板的帮助下使用冲浪。还有的时候皮卡丘可以学习其他绝招，例如用气球使出飞翔。</p>
+	    		</div>
+	    		<div class="col-md-5">
+	    			<img src="images/比卡丘.png">
+	    		</div>
+	    	</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="pp1">
+	    	<div class="row spilit-type">
+	    		<div class="col-md-5">
+	    			<img src="images/吉尼龟.png">
+	    		</div>
+	    		<div class="col-md-7">
+	    			<h2><span class="h1 text-primary">吉尼龟</span> 水系神奇精灵</h2>
+	    			<p class="text-justify">杰尼龟可以喷水。它们是天生的游泳健将，但由于体型太小，它们只适合运送一些小型的物品。虽然它的下巴看起来很不起眼，但它可以学习咬咬。它的头很小，但可以使用火箭头槌。杰尼龟的壳能让它使用高速回转、守住、铁壁、缩壳等技能。它的尾巴很小很像松鼠，却可以学习水柱尾、铁尾一类的技能。</p>	    			
+	    		</div>	    		
+	    	</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="pp2">
+	    	<div class="row spilit-type">
+	    		<div class="col-md-7">
+	    			<h2><span class="h1 text-primary">妙蛙种子</span> 草系神奇精灵</h2>
+	    			<p class="text-justify">因为妙蛙种子背上的种子，所以它可以学会大量的草系技能。无论是孢子还是气味，是花瓣还是种子，都能从种子的尖端释放出来。而藤蔓和叶片则来自于种子的底部（在漫画神奇宝贝特别篇中则是从种子的尖端）。</p>
+				</div>	    		    		
+	    		<div class="col-md-5">
+	    			<img src="images/妙蛙种子.png">
+	    		</div>	    		
+	    	</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="pp3">
+	    	<div class="row spilit-type">
+	    		<div class="col-md-5">
+	    			<img src="images/小火龙.png">
+	    		</div>
+	    		<div class="col-md-7">
+	    			<h2><span class="h1 text-primary">小火龙</span> 火系神奇精灵</h2>
+	    			<p class="text-justify">小火龙是它的家族中最温和的。它的健康和情绪，可以很容易地通过关注它的尾巴尖上的火焰而看出来。例如，如果火焰突然增长，那可能是激怒了小火龙，它甚至可能会使用愤怒攻击。在野外它是稀缺的。这只神奇宝贝大部分都是驯养的，为了给大木博士作为初学者神奇宝贝。</p>	    	
+	    		</div>	    		
+	    	</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="pp4">
+	    	<div class="row spilit-type">
+	    		<div class="col-md-7">
+	    			<h2><span class="h1 text-primary">胖丁</span> 妖精系神奇精灵</h2>
+	    			<p class="text-justify">胖丁是圆形的粉色球状神奇宝贝，有小的猫耳和大眼睛。胖丁有有弹性的气球状皮肤。它们有小的短臂，但脚较大且没有尾巴。它有一束毛发状的卷毛在头顶。胖丁的体内可能都是空气，因为在神奇宝贝竞技场中打倒胖丁后它会掉到地上像一个瘪掉的气球或一张纸片。</p>	    			
+	    		</div>
+	    		<div class="col-md-5">
+	    			<img src="images/胖丁.png">
+	    		</div>	    		
+	    	</div>
+	    </div>
+	  </div>
+	</div>	
+
+	<hr class="hrMargin">
+	<div id="go-top"><a href="#top"><img src="images/top.png"></a></div>
+	<footer>
+		<p class="h4">@TabWeng前端开发</p>
+	</footer>
+
+</div>
+
+<!-- 关于说明 -->
+<div class="modal fade" id="about">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">关于我们</h4>
+      </div>
+      <div class="modal-body">
+        <p>这是我们编写的一个测试网页，在手机端可以自适应，可以试试哈！-Tab Weng</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- 收藏本宝宝 -->
+<div class="modal fade" id="collection">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">感谢你的收藏！</h4>
+      </div>
+      <div class="modal-body">
+        <p>本网页为Demo练习测试，感谢你的关注！-Tab Weng</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">支持</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- 引入jquery -->
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- 引入bootstrap javascript文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/minjs.js" type="text/javascript"></script>
+</body>
+</html>

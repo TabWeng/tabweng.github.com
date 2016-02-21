@@ -1,0 +1,103 @@
+body {
+	padding-top:50px;
+	padding-bottom: 30px;
+}
+
+/*轮播样式*/
+.carousel-caption h1 {
+	margin-bottom: 20px;
+}
+
+.carousel-caption p {
+	margin-bottom: 20px;
+}
+
+
+.carousel-inner {
+	height:500px;
+	background-color:#000;
+}
+
+.carousel-inner .item {
+	height: 500px;
+	background-color: #000;
+}
+
+.carousel-inner img {
+	margin: 0 auto;
+	box-shadow: 0 0 200px #fff;
+	background-color: #000;
+}
+
+/*轮播背景颜色*/
+#crl_0 {
+	background-color: #9ACD32;
+}
+
+#crl_1 {
+	background-color: #390068;
+}
+
+#crl_2 {
+	background-color: #2E8B57;
+}
+
+#crl_3 {
+	background-color: #EEC591;
+}
+
+#crl_4 {
+	background-color: #EEA9B8;
+}
+
+/*三栏布局*/
+#goodSelectSpilit {
+	padding-top: 60px;
+}
+
+#summary-container {
+	text-align: center;
+}
+
+.jsMargin img {
+	width: 200px;
+}
+
+.jsMargin {
+	margin-bottom: 30px;
+}
+
+.hrMargin {
+	margin-bottom: 40px;	
+}
+
+/*标签页*/
+.spilit-type img{
+	max-width: 500px;
+	width: 100%;
+	padding: 60px 0;
+}
+
+.spilit-type h2 {
+	margin-top: 120px;
+}
+
+.spilit-type .col-md-7 p{
+	font-size: 18px;
+}
+
+/*页脚*/
+#go-top {
+	text-align: right;
+	margin-bottom: 30px;
+}
+
+#go-top a{
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+}
+
+#go-top a:hover {
+	opacity: 1;
+	filter:alpha(opacity=100);
+};
