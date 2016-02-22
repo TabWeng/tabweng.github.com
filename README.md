@@ -1,4 +1,5 @@
 Presentation of works
 =====================
 
-[用bootstrap实现的简单网页-小精灵](https://tabweng.github.io/Bootstrap_smallDemo/index.html){:target="_blank"}<br />
+<a href="https://tabweng.github.io/Bootstrap_smallDemo/index.html" target="_blank">用bootstrap实现的简单网页-小精灵</a>
+
