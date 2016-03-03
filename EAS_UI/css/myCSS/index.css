@@ -1,0 +1,222 @@
+
+/*基本样式*/
+body {
+	background: #F7F7F7;
+}
+
+/*居中*/
+.D-intoCenter {
+	text-align: center;
+}
+
+/*常用大字体*/
+.D-bigWord-B {
+	font-size: 35pt;
+}
+.D-bigWord-M {
+	font-size: 30pt;
+}
+.D-bigWord-S {
+	font-size: 25pt;
+}
+
+/*常用中字体*/
+.D-mediumWord {
+	font-size: 19pt;
+}
+
+/*清除浮动*/
+.D-eas-clearFix:after {
+    clear: both;
+    display: block;
+    visibility: hidden; /*设置不可见*/
+    height: 0;
+    line-height: 0;
+    content: ""; /*after伪对象必须的属性，可以设置内容为空*/
+}
+
+.D-eas-clearFix {}
+
+/*分隔举例*/
+.hrMargin {
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	background: #F7F7F7;
+}
+
+
+/*==========================
+导航条
+==========================*/
+#navbarId {
+	height: 60px;
+}
+
+#navbarId .container {
+	margin-top: 4px;
+	font-size: 16px;
+}
+
+/*域名链接*/
+#theBrand {
+	font-size: 24px;
+}
+
+/*小三角形*/
+.glyphicon-triangle-bottom {
+	/*柳色*/
+	color: #78a355;
+}
+
+/*子系统*/
+#smallSys {
+	font-size: 16px;
+}
+
+#theBrand {
+	color: #fff;
+	font-weight: 800;
+}
+
+#theBrand span {
+	color: #78a355;
+}
+
+/*==========================
+页头
+==========================*/
+.page-header {
+	margin-top: 60px;
+}
+/*使用css设置背景图片*/
+/*#theHeader-Image {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	color: #fff;
+	background: url(../../images/sea.jpg);
+	-moz-mask-image: url(../..images/ccc.png);
+	-webkit-mask-image: url(../..images/ccc.png);
+	mask-image: url(../..images/ccc.png);
+}*/
+
+#theHeader-Image {
+	position: relative;
+}
+
+#theHeader-Image img {
+	width: 100%;
+	height: 500px;
+}
+
+
+#theHeader-Image h1 {
+	margin-top: 200px;
+	text-align: center;
+	font-size: 60px;
+	color: #fff;
+	font-family: 'Microsoft YaHei';
+	font-weight: 900;
+}
+
+/*设置遮罩*/
+#headMark {
+	position: absolute;
+	background-color: #000;
+	opacity: 0.4;
+	height: 500px;
+	width: 100%;
+}
+
+/*大标题*/
+#headWord {
+	position: absolute;
+	height: 500px;
+	width: 100%;
+}
+
+/*==========================
+数据分析服务
+==========================*/
+#oa-And-sa {
+	margin-bottom: 40px;
+}
+
+.D-index-Module {
+	/*height: 150px;*/
+	/*白色背景*/
+	background-color: #fff;
+}
+
+#das {
+	margin-bottom: 30px;
+}
+
+#das h2{
+	font-size: 30pt;
+}
+#das span {
+	font-size: 25pt;
+	display: inline;
+}
+
+/*定向分析和专向分析*/
+
+#oa,#sa {
+	background: #fff;
+}
+
+#oa .D-bigWord-B p,
+#sa .D-bigWord-B p
+ {
+	height: 150px;
+	line-height: 150px;
+}
+
+/*定向分析绿色边框*/
+#oa .D-bigWord-B
+{
+	border-left: 10px solid #78a355;
+	border-right: 1px dotted #999999;
+}
+
+/*专向分析粉色边框*/
+
+#sa .D-bigWord-B
+{
+	border-left: 10px solid #CD6090;
+	border-right: 1px dotted #999999;
+}
+
+/*定向分析介绍,专向分析*/
+
+#oa .D-mediumWord,
+#sa .D-mediumWord 
+{
+	height: 72px;
+	padding: 39px 0;
+}
+
+#oa .col-md-2 p,
+#sa .col-md-2 p
+{
+	height: 150px;
+	line-height: 150px;
+}
+
+#oa .D-mediumWord,
+#sa .D-mediumWord
+ {
+	height: 150px;
+}
+
+/*=====================
+页尾
+=====================*/
+.D-footer .row {
+	height: 100px;
+	background-color: #ccc;
+}
+
+
