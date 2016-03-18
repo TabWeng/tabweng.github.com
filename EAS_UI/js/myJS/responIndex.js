@@ -4,7 +4,7 @@ $(function(){
 		"#headWord h1",
 		0,400,
 		{
-			"font-size":"50px"
+			"font-size":"28px"
 		}
 	);
 
@@ -12,7 +12,7 @@ $(function(){
 		"#mediumWord",
 		0,376,
 		{
-			"font-size":"14pt"
+			"font-size":"15pt"
 		}
 	);
 
