@@ -1,18 +1,18 @@
 $(function(){
 
 	myResponsive(
-		"#myLeftBar",
-		748,1023,
-		{
-			"display":"none"
-		}
-	);
-
-	myResponsive(
 		"#myNav",
 		0,748,
 		{
 			"position":"static"
+		}
+	);
+
+	myResponsive(
+		"#myLeftBar",
+		748,1023,
+		{
+			"display":"none"
 		}
 	);
 

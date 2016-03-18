@@ -95,12 +95,4 @@ function myResponsive(target,minWidth,maxWidth,styleJson){
 			}
 		}
     });
-
- //    // 触发resize
-	// setTimeout(function(){
-	// 	var $smallDiv = "<div id='samllNoneDiv' style='height:100px'></div>";
-	// 	$("body").append($smallDiv);
-	// 	// $("#samllNoneDiv").remove();
-	// },2000);
-
 }
