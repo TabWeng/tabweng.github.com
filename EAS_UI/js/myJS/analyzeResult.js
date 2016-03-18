@@ -7,14 +7,11 @@ $(function() {
 	//单页目录滚动插件使用
 	scrollNav();
 
-	// 触发resize
-	$(window).trigger("resize");
-
 	// 监听
     $(window).resize(function() {
     	// 设置文字说明的高度和图片等高
         explainHeight();
-		// 控制模态框图片的尺寸自适应窗口大小 - 初始化
+		// 控制模态框图片的尺寸自适应窗口大小
 		ctrlModalPicSise();
     });
 });
