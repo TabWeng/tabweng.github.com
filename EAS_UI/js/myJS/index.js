@@ -4,7 +4,6 @@ $(function() {
 
 	// 监听
     $(window).resize(function() {
-        
     });
 });
 
@@ -33,4 +32,18 @@ function changerHeadPic(picNum){
 
 	var num = parseInt(Math.random()*picNum);
 	$("#theHeader-Image img").attr("src",json[num]);
+}
+
+/*********************
+函数名：viewSmallSysLink
+作用：显示或者隐藏子系统超链接
+**********************/
+function viewSmallSysLink(){
+	var flag = false;
+	$("#triStyle").click(
+			function(){
+				$("#smallSysForLink").slideToggle("normal");
+				$("#cancelSysLink").slideToggle("normal");	
+			}
+		);
 }

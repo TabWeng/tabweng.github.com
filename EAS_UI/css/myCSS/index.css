@@ -46,6 +46,14 @@ body {
 }
 
 
+/***************************/
+/*抵消导航的高度*/
+#myOffsetNav {
+	height: 60px;
+}
+/***************************/
+
+
 /*==========================
 导航条
 ==========================*/
@@ -68,6 +76,31 @@ body {
 	/*柳色*/
 	color: #78a355;
 }
+#triStyle {
+	margin-left: 5px;
+	margin-top: 18px;
+	cursor: pointer;
+}
+
+/*点击小三角形后的显示*/
+#myClickPic {
+	margin-top: 15px;
+	text-align: center;
+	background-color: #222222;
+}
+
+#myClickPic .divider {
+	background-color: #000;
+}
+
+#myClickPic a {
+	color: #fff;
+}
+
+#myClickPic a:hover {
+	background-color: #333;
+
+}
 
 /*子系统*/
 #smallSys {
@@ -81,6 +114,42 @@ body {
 
 #theBrand span {
 	color: #78a355;
+}
+
+/*子系统链接的div*/
+#smallSysForLink{
+	position: relative;
+	top: -10px;
+	height: 100px;
+	width: 100%;
+	background-color: #363636;
+	display: none;
+}
+#smallSysForLink .row {
+	margin-top: 30px;
+}
+#mediumWord {
+	color: #fff;
+	font-family: Microsoft JhengHei;
+}
+#mediumWord span {
+	color:#78a355;
+	font-weight: 800;
+}
+/*子系统的按钮*/
+#intoSmallSysBtn {
+	margin-left: 10px;
+	background-color: #78a355;
+	height: 28px;
+	line-height: 28px;
+	position: relative;
+	top:-2px;
+}
+
+/*用户头像*/
+#myHeadPic {
+	width: 25px;
+	height: 25px;
 }
 
 /*==========================
@@ -214,7 +283,7 @@ body {
 /*=====================
 页尾
 =====================*/
-.D-footer .row {
+.D-footer {
 	height: 100px;
 	background-color: #ccc;
 }

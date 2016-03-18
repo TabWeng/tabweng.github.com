@@ -1,0 +1,10 @@
+#conInTro {
+	height: 300px;
+	background-color: red;
+}
+
+#inTro {
+	height: 300px;
+	background-color: yellow;
+	overflow:auto;
+}
