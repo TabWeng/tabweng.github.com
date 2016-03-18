@@ -1,4 +1,5 @@
 $(function(){
+	alert("1");
 
 	myResponsive(
 		"#myNav",
@@ -53,6 +54,8 @@ $(function(){
 
 
 function myResponsive(target,minWidth,maxWidth,styleJson){
+	alert("2");
+
 	// 获取目标元素及总数
 	var targetEle = $(target);
 	// 用来获取原来的css样式
