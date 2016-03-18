@@ -2,19 +2,19 @@ $(function(){
 
 	myResponsive(
 		"#headWord h1",
-		0,700,
+		0,400,
 		{
-			"font-size":"12px"
+			"font-size":"50px"
 		}
 	);
 
-	// myResponsive(
-	// 	"#mediumWord",
-	// 	0,376,
-	// 	{
-	// 		"font-size":"12px"
-	// 	}
-	// );
+	myResponsive(
+		"#mediumWord",
+		0,376,
+		{
+			"font-size":"14pt"
+		}
+	);
 
 	myResponsive(
 		"#das h2",
@@ -32,13 +32,13 @@ $(function(){
 		}
 	);
 
-	// myResponsive(
-	// 	"#headWord h1",
-	// 	0,376,
-	// 	{
-	// 		"font-size":"12px"
-	// 	}
-	// );
+	myResponsive(
+		"#headWord h1",
+		0,376,
+		{
+			"font-size":"27pt"
+		}
+	);
 
 
 
