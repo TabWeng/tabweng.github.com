@@ -1,5 +1,4 @@
 $(function(){
-	alert("1");
 
 	myResponsive(
 		"#myNav",
@@ -53,55 +52,3 @@ $(function(){
 });
 
 
-function myResponsive(target,minWidth,maxWidth,styleJson){
-	alert("2");
-
-	// 获取目标元素及总数
-	var targetEle = $(target);
-	// 用来获取原来的css样式
-	var styleName = [];
-	var styleValue = [];
-
-	var t = 0;
-	for(var i in styleJson){
-		styleName[t] = i;
-		styleValue[t] = targetEle.css(i);
-		t++;
-	}
-
-	// 执行一遍所有，解决手机端无响应问题
-	var t = styleName.length;
-	var bodyWidth = document.body.clientWidth;
-	// // 设置新样式
-	if(bodyWidth > minWidth && bodyWidth < maxWidth){
-	 	for(var n = 0; n < t; n++){
-	 		targetEle.css(styleName[n],styleJson[styleName[n]]);
-	 	}
-	}
-	else{
-		// 设置为原来的样式
-		for(var n = 0; n < t; n++){
-			targetEle.css(styleName[n],styleValue[n]);
-		}
-	}
-
-
-	// 随窗口动态变化
-	$(window).resize(function() {
-
-		var t = styleName.length;
-		var bodyWidth = document.body.clientWidth;
-		// // 设置新样式
-		if(bodyWidth > minWidth && bodyWidth < maxWidth){
-		 	for(var n = 0; n < t; n++){
-		 		targetEle.css(styleName[n],styleJson[styleName[n]]);
-		 	}
-		}
-		else{
-			// 设置为原来的样式
-			for(var n = 0; n < t; n++){
-				targetEle.css(styleName[n],styleValue[n]);
-			}
-		}
-    });
-}
