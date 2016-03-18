@@ -73,6 +73,9 @@ function myResponsive(target,minWidth,maxWidth,styleJson){
 		t++;
 	}
 
+	// 触发resize
+	$(window).trigger("resize");
+
 	// 执行一遍所有，解决手机端无响应问题
 	var t = styleName.length;
 	var bodyWidth = document.body.clientWidth;
