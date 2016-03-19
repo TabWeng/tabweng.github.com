@@ -42,37 +42,61 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html" id="theBrand"><span>EAS</span>.COM</a>
+      <a class="navbar-brand" href="#" id="theBrand"><span>EAS</span>.COM</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
       <!-- 小三角标签 -->
-      <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" ></span>         
+<!--       <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" ></span>   -->       
       <ul class="nav navbar-nav navbar-right"> 
-        <li><a href="#">数据分析服务</a></li>
-        <li><a href="register.html">注册</a></li>
-        <li><a href="#">登录</a></li>
+        <li><a href="#" id="mediumWord">基于学立方数据学习分析系统</a></li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">服务大厅</a></li>
+        
+        <li><a href="register.html">注册 | 登录</a></li>
+        
+  <!--*登录后的显示*******************************************-->
+        <!-- 显示用户头像等 -->
+        <li>
+          <a href="#">
+            <!-- 头像 -->
+            <img id="myHeadPic" src="images/14.jpg">
+          </a>
+        </li>
+        <!-- 小三角标签 --> 
+        <li class="dropdown">
+          <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></span>
+          <ul class="dropdown-menu" id="myClickPic">
+            <li><a>hlwyfeng</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">个人中心</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">退出</a></li>
+          </ul>
+        </li>
+  <!--*结束**************************************************-->
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 
   <!-- 载入子系统超链接 -->
-  <div id="smallSysForLink">
+<!--   <div id="smallSysForLink">
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-            <a href="" class="D-mediumWord" id="mediumWord"><span>基于学立方</span>数据学习分析系统</a>
+            <a href="" class="D-mediumWord" id="mediumWord"><span>基于学立方</span>数据学习分析系统</a> -->
             <!-- <a href="#" class="button button-raised button-pill button-inverse">进入使用</a> -->
-            <a href="" class="button button-primary hidden-xs" id="intoSmallSysBtn">进入使用</a>
+<!--             <a href="" class="button button-primary hidden-xs" id="intoSmallSysBtn">进入使用</a>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </nav>
 
 
 <!-- 栅格系统 -->
-<div class="container-fluid" style="background: url(images/10.jpg)">
+<div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div id="registerId">
