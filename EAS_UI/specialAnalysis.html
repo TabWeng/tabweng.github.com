@@ -168,7 +168,7 @@
 		<div class="input-group col-md-3 col-sm-2" id="search" >
         <input type="text" class="form-control inputID1" placeholder="分析师ID"id="Analyst_Id" disabled="disabled">
         <div class="input-group-btn" id="">
-			<a href="#"class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+			<a href="#"class="btn btn-default"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a>
 		</div>
 		</div>
 		
@@ -231,7 +231,7 @@
                             <td class="analystOperation">
                              <button class="D-havePadBtn button  button-rounded button-highlight Pay">立即付款</button>
                              <span class=" yOn CancelPay">取消付款</span>
-                             <span class=" yOn" >取消订单</span>
+                             <span class=" yOn CancelOrder">取消订单</span>
                             </td>
                           </tr>
                           <tr>
@@ -247,7 +247,7 @@
                             <td class="analystOperation">
                              <button class="D-havePadBtn button  button-rounded button-highlight Pay">立即付款</button>
                              <span class=" yOn CancelPay">取消付款</span>
-                             <span class=" yOn" >取消订单</span>
+                             <span class=" yOn CancelOrder">取消订单</span>
                             </td>
                           </tr>
                           <tr>
@@ -263,7 +263,7 @@
                             <td class="analystOperation">
                              <button class="D-havePadBtn button  button-rounded button-highlight Pay">立即付款</button>
                              <span class=" yOn CancelPay">取消付款</span>
-                             <span class=" yOn" >取消订单</span>
+                             <span class=" yOn CancelOrder">取消订单</span>
                             </td>
                           </tr>
                          
@@ -288,39 +288,47 @@
 
   <div class="row form-group">
     
-    <label class="control-label col-md-1 col-sm-2 col-xs-12">订单号</label>
-    <div class="col-md-1 col-sm-1 col-xs-12">
-        <input type="text" class="form-control " id="Dinpt" readonly="true" >
+    <div class="D-signStyle">
+      <p>
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style="color:red;"></span>
+        是否重新处理本订单？您可以通过下面的操作重新推送
+      </p>
     </div>
+        <label class="control-label col-md-1 col-sm-2 col-xs-12">订单号</label>
+        <div class="col-md-2 col-sm-1 col-xs-12">
+            <input type="text" class="form-control " id="Dinpt" readonly="true" >
+        </div>
+       
+         
+        <div class="col-md-2 col-sm-3 col-xs-12 ">
+          <label class="radio-inline">
+        <input type="radio" name="chose1" >发布到服务大厅
+          </label>
+        </div>
+        <div class="col-md-2 col-sm-3 col-xs-12 ">
+          <label class="radio-inline">
+        <input type="radio" id="check2" name="chose1" >指定分析师
+          </label>
+        </div>
+        <div class="input-group col-md-2 col-sm-3 col-xs-12" id="search" >
+            <input type="text" class="form-control inputID2" placeholder="分析师ID" id="Analyst_Id"disabled="disabled" >
+            <div class="input-group-btn" >
+            <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a>
+          </div>
+       </div>
+    </div>
+
    
-     
-    <div class="col-md-2 col-sm-3 col-xs-12 ">
-      <label class="radio-inline">
-    <input type="radio" name="chose1" >发布到服务大厅
-      </label>
+    <div class="row">
+       <div class="col-md-8 col-sm-6 col-xs-12 D-style11"></div> 
+       <div class="col-md-2 col-sm-3 col-xs-12">
+       <button class=" button button-block button-rounded button-primary Dbtn"id="">确定</button>     
+       </div>
+       <div class="col-md-2 col-sm-3 col-xs-12">
+         <button class=" button button-block button-rounded button-primary Dbtn" id="cancel">取消</button>
+       </div>
     </div>
-    <div class="col-md-2 col-sm-3 col-xs-12 ">
-      <label class="radio-inline">
-    <input type="radio" id="check2" name="chose1" >指定分析师
-      </label>
-    </div>
-    <div class="input-group col-md-2 col-sm-3 col-xs-12" id="search" >
-        <input type="text" class="form-control inputID2" placeholder="分析师ID" id="Analyst_Id"disabled="disabled" >
-        <div class="input-group-btn" >
-        <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-      </div>
-   </div>
-   </div>
-   
-  <div class="row">
-     <div class="col-md-8 col-sm-6 col-xs-12"></div> 
-     <div class="col-md-2 col-sm-3 col-xs-12">
-     <button class=" button button-block button-rounded button-primary Dbtn"id="">确定</button>     
-     </div>
-     <div class="col-md-2 col-sm-3 col-xs-12">
-       <button class=" button button-block button-rounded button-primary Dbtn" id="cancel">取消</button>
-     </div>
-  </div>
+
 </div>
 
  
@@ -606,7 +614,7 @@
     <!-- 引入自己写的响应式页面插件 -->
     <script src="js/myResponsive.js" type="text/javascript"></script>
     <script src="js/myJS/specialAnalysis.js" type="text/javascript"></script>
-
+    <script src="js/myJS/AJAXspecialAnalysis.js" type="text/javascript"></script>
     <!-- 我自己的JavaScript -->
     
   </body>

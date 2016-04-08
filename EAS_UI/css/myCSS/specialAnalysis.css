@@ -133,3 +133,24 @@ color: rgb(255,96,0);
   #payForm {
   	font-size: 15px;
   }
+
+
+  /*****************************************************/
+  /*新推送提示*/
+  .D-signStyle {
+  	margin: 0 15px 20px;
+  	padding: 10px 0 6px 6px;
+  	background-color: #FFC0CB;
+  	font-size: 16px;
+  	height: 40px;
+  }
+
+  /*推送操作*/
+  #chose{
+  	background-color: #fff;
+  	padding-bottom: 20px;
+  }
+
+  .D-style11 {
+  	margin-top: 20px;
+  }
