@@ -1,0 +1,151 @@
+
+/*加粗表格内容*/
+td {
+	font-weight: 600;
+}
+
+/*设置管理员标题的样式*/
+#releaseReq {
+	margin: 20px 0;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/*设置分隔线的样式*/
+.D-lineStyle {
+	border-color: #999;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+/*标签页标题设置*/
+.D-tabTitleStyle {
+	font-size: 18px;
+}
+
+.D-tabTitleStyle-second {
+	font-size: 15px;
+}
+
+.D-tabTitleStyle-second a {
+	background-color: #E0EEE0;
+}
+
+.D-tabTitleStyle a {
+	background-color: #EBEBEB;
+	margin-top: 5px;
+}
+
+/*第二层标签页样式设置*/
+.D-secondTabStyle {
+	margin: 20px 10px;
+}
+
+/*表格样式*/
+.D-myTableStyle {
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+/*表格头的样式*/
+.D-thead {
+	background-color: #EBEBEB;
+}
+
+/*表格内容样式*/
+.D-myTabContent {
+	background-color: #fff;
+}
+
+
+
+/*翻页，上一页，下一页*/
+.D-myNavPage ul li a:hover{
+	color: #fff;
+	background-color: #BCEE68;
+}
+
+.D-cancelAnalizeBtn {
+	height: 30px;
+	line-height: 30px;
+	background-color: #FF7680;
+	font-size:15px;
+}
+
+/*已付款按钮*/
+.D-havePadBtn {
+	height: 30px;
+	line-height: 30px;
+	font-size:15px;
+}
+
+.D-detailBtn {
+	padding: 0 5px;
+	height: 30px;
+	line-height: 30px;
+	font-size:15px;	
+}
+
+
+/*表格样式的补充*/
+.D-someTableStyle {
+	background-color: #fff;
+}
+
+
+/*查看申请*/
+.D-apply {
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #EBEBEB;
+}
+
+.D-apply p {
+	line-height: 30px;
+}
+
+/*文字样式*/
+#nameStyle {
+	font-size: 20px;
+	font-weight: 500;
+	font-family: Microsoft Jhenghei;
+}
+
+/*分析师接单按钮*/
+.analystOperation{
+	/*display: none;*/
+}
+/*分析师列表*/
+#analystList  {
+	padding: 20px;
+	font-family: Microsoft Jhenghei;
+}
+.picBox{
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+}
+.miniPic{
+	width: 200px;
+	height: 220px;
+	margin: auto;
+}
+.infoBox{
+	width: 200px;
+	margin: auto;
+}
+/*设置内边距为0*/
+.no-padding{
+	padding: 0;
+}
+/*设置小字体*/	
+.littleWord{
+	font-size: 16px;
+	color: #9d9d9d;
+}
+#analystID,#analystName,#analystStar,#orderNum{
+	font-size: 18px;
+	font-weight: 900;
+}

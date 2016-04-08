@@ -50,7 +50,7 @@
 /* 目录的背景*/
 #myContents li{
 	background-color: #E0EEE0;
-	
+
 }
 
 
@@ -74,7 +74,7 @@
 
 #myArChooseBtn a {
 	margin-top: 10px;
-	margin-bottom: 10px;	
+	margin-bottom: 10px;
 }
 
 
@@ -83,6 +83,3 @@
 /*******************************************左边侧边栏的使用效果*/
 .nav > li > a {
 }
-
-
-

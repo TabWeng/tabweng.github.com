@@ -1,0 +1,73 @@
+
+/*设置窗体*/
+#myVipPayWindow {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	text-align: center;
+	background-color: #fff;
+	font-family: Microsoft Jhenghei;
+	overflow: hidden;
+	box-shadow: 1px 0 10px #ccc;
+	border-radius: 10px;
+}
+
+/*设置统一风格*/
+.D-unifyStyle {
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+
+}
+
+#inputVipMonth {
+	display: inline-block;
+	width: 80px;
+}
+
+.D-myPositionStyle {
+	text-align: left;
+	display: inline-block;
+	width: 128px;
+	position: relative;
+	left: 4px;
+}
+
+
+/*设置每行距离*/
+.D-myVip {
+	margin-bottom: 10px;
+}
+
+#myVipOR img{
+	width: 100%;
+	max-width: 220px;
+	border: 8px solid #A7DF3C;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+/*微调1*/
+.fitTo-1 {
+	display: inline-block;
+	width: 10px;
+}
+
+/*尾号5位数*/
+#vipKey{
+	height: 40px;
+	font-size: 20px;
+	text-align: center;
+	border: 3px solid #A7DF3C;
+}
+
+/*按钮样式设置*/ 
+.D-myBtn {
+	font-size: 20px;
+	padding: 0 5px;
+}
+
+/*使用帮助*/
+#myHelp {
+	height: 20px;
+}

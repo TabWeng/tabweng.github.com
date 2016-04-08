@@ -7,7 +7,11 @@ myResponsive(
 	{
 		"background-color":"green", //这里设置CSS样式，注意最后一个不用加逗号
 		"font-size":"50px"
-	}
+	},
+	[							//可选
+		"className1", //添加类1
+		"className2"  //添加类2
+	]
 );
 
 使用说明：
@@ -23,7 +27,11 @@ $(function(){
 		{
 			"background-color":"green",
 			"font-size":"50px"
-		}
+		},
+		[
+			"className1",
+			"className2"
+		]
 	);
 });
 
@@ -42,6 +50,9 @@ $(function(){
 
 /* 更新说明
 
+v2.0 2016-3-21
+	1. 可添加类
+
 V1.1 2016-3-18
 	1. 优化初始窗口也适应css操作
 */
@@ -55,46 +66,34 @@ V1.1 2016-3-18
 	minWidth：（int）操作区间宽度的最小值
 	maxWidth：（int）操作区间宽度的最大值
 	styleJson：（json）要修改的css样式，json格式
+	classArray: （String）可以添加类的集合
 *作者：TabWeng
 *邮箱：hlwyfeng@gmail.com
 ***********/
 
-function myResponsive(target,minWidth,maxWidth,styleJson){
+function myResponsive(target,minWidth,maxWidth,styleJson,classArray){
 	// 获取目标元素及总数
 	var targetEle = $(target);
-	// 用来获取原来的css样式
-	var styleName = [];
-	var styleValue = [];
 
-	var t = 0;
-	for(var i in styleJson){
-		styleName[t] = i;
-		styleValue[t] = targetEle.css(i);
-		t++;
-	}
+	// 添加样式
+	// 如果Json为非空，则执行
+	if(!$.isEmptyObject(styleJson)){
 
-	// 触发resize
-	$(window).trigger("resize");
+		// 用来获取原来的css样式
+		var styleName = [];
+		var styleValue = [];
 
-	// 执行一遍所有，解决手机端无响应问题
-	var t = styleName.length;
-	var bodyWidth = document.body.clientWidth;
-	// // 设置新样式
-	if(bodyWidth > minWidth && bodyWidth < maxWidth){
-	 	for(var n = 0; n < t; n++){
-	 		targetEle.css(styleName[n],styleJson[styleName[n]]);
-	 	}
-	}
-	else{
-		// 设置为原来的样式
-		for(var n = 0; n < t; n++){
-			targetEle.css(styleName[n],styleValue[n]);
+		var t = 0;
+		for(var i in styleJson){
+			styleName[t] = i;
+			styleValue[t] = targetEle.css(i);
+			t++;
 		}
-	}
 
+		// 触发resize
+		$(window).trigger("resize");
 
-	// 随窗口动态变化
-	$(window).resize(function() {
+		// 执行一遍所有，解决手机端无响应问题
 		var t = styleName.length;
 		var bodyWidth = document.body.clientWidth;
 		// // 设置新样式
@@ -109,5 +108,54 @@ function myResponsive(target,minWidth,maxWidth,styleJson){
 				targetEle.css(styleName[n],styleValue[n]);
 			}
 		}
-    });
+
+		// 随窗口动态变化
+		$(window).resize(function() {
+			var t = styleName.length;
+			var bodyWidth = document.body.clientWidth;
+			// // 设置新样式
+			if(bodyWidth > minWidth && bodyWidth < maxWidth){
+			 	for(var n = 0; n < t; n++){
+			 		targetEle.css(styleName[n],styleJson[styleName[n]]);
+			 	}
+			}
+			else{
+				// 设置为原来的样式
+				for(var n = 0; n < t; n++){
+					targetEle.css(styleName[n],styleValue[n]);
+				}
+			}
+	    });
+
+	}
+
+	// 添加Class
+	// 如果数组为非空，则执行
+	if(!$.isEmptyObject(classArray)){
+
+		// 初始化
+		var bodyWidth = document.body.clientWidth;
+		if(bodyWidth > minWidth && bodyWidth < maxWidth){
+			for(var i in classArray){
+				targetEle.addClass(classArray[i]);
+			}
+		}
+
+		// 动态调节
+		$(window).resize(function(){
+
+			var bodyWidth = document.body.clientWidth;
+
+			if(bodyWidth > minWidth && bodyWidth < maxWidth){
+				for(var i in classArray){
+					targetEle.addClass(classArray[i]);
+				}
+			}else{
+				for(var i in classArray){
+					targetEle.removeClass(classArray[i]);
+				}
+			}			
+		});
+	}
+
 }

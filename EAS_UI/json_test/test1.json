@@ -1,0 +1,283 @@
+
+{
+	"userManage":{
+		"list":[
+			{
+				"id":"0013",
+				"username":"Tom",
+				"realName":"芳芳",
+				"phone":"18459189389",
+				"email":"123@163.com",
+				"vipDeadline":"2016.06.07T12333"
+			},
+			{
+				"id":"0013",
+				"username":"Tom",
+				"realName":"芳芳",
+				"phone":"18459189389",
+				"email":"123@163.com",
+				"vipDeadline":"2016.06.07T12333"
+			},
+			{
+				"id":"0013",
+				"username":"Tom",
+				"realName":"芳芳",
+				"phone":"18459189389",
+				"email":"123@163.com",
+				"vipDeadline":"2016.06.07"
+			}
+		],
+		"totalPage":10
+	},
+
+	"analystManage":{
+				
+		"list":[
+			{
+				"id":"0014",
+				"username":"Tom",
+				"realName":"芳芳",
+				"phone":"18459189389",
+				"alipayAccount":"10000000000",
+				"orders":150,
+				"starAverage":"4.32",
+				"isEmployee":0
+			},
+			{
+				"id":"0013",
+				"username":"Tom",
+				"realName":"芳芳",
+				"phone":"18459189389",
+				"alipayAccount":"10000000000",
+				"orders":150,
+				"starAverage":"4.32",
+				"isEmployee":0
+			},
+			{
+				"id":"0013",
+				"username":"Tom",
+				"realName":"芳芳",
+				"phone":"18459189389",
+				"alipayAccount":"10000000000",
+				"orders":150,
+				"starAverage":"4.32",
+				"isEmployee":0
+			}
+		],		
+		"totalPage":10	
+	},
+
+	"vipGathering":{
+			
+		"list":[
+			{
+				"id":10000002,				
+				"month":4,
+				"price":30,
+				"orderSix":"543789",
+				"payDate":"2016-05-13",
+				"isRealPay":null,
+				"user":{
+					"phone":"18459189389",
+					"username":"Tom"
+				}
+			},
+			{
+				"id":10000002,				
+				"month":4,
+				"price":30,
+				"orderSix":"543789",
+				"payDate":"2016-05-13",
+				"isRealPay":1,
+				"user":{
+					"phone":"18459189389",
+					"username":"Tom"
+				}
+			},
+			{
+				"id":10000002,				
+				"month":4,
+				"price":30,
+				"orderSix":"543789",
+				"payDate":"2016-05-13",
+				"isRealPay":0,
+				"user":{
+					"phone":"18459189389",
+					"username":"Tom"
+				}
+			}
+		],		
+		"totalPage":8	
+	},
+
+	"analysisGathering":{
+		
+		"list":[
+			{
+				"price":30,
+				"orderSix":"543789",
+				"userPayDate":"2016-05-13T123456",
+				"id":10000002,
+				"isRealPay":1,
+				
+				"userByUserId":{
+					"username":"Tom",
+					"phone":"18459189389"				
+				},
+
+				"userByAnalystId":{
+					"realName":"aaa"
+				}
+			},
+			{
+				"price":30,
+				"orderSix":"543789",
+				"userPayDate":"2016-05-13",
+				"id":10000002,
+				"isRealPay":0,
+				"userByUserId":{
+					"username":"Tom",
+					"phone":"18459189389"				
+				},
+				"userByAnalystId":{
+					"realName":"aaa"
+				}
+			},
+			{
+				"price":30,
+				"orderSix":"543789",
+				"userPayDate":"2016-05-13",
+				"id":10000002,
+				"isRealPay":1,
+				"userByUserId":{
+					"username":"Tom",
+					"phone":"18459189389"				
+				},
+				"userByAnalystId":{
+					"realName":"aaa"
+				}
+			}
+		],		
+		"totalPage":6		
+	},
+
+	"returnMoney":{
+		"list":[
+			{
+				"price":300,
+				"finishDate":"2016-05-13",
+				"id":10000002,
+                "payAnlistDate":null,
+                "payAnlistPrice":200,
+				"userByAnalystId":{
+					"realName":"aaa",
+					"phone":"18459189389",
+					"starAverage":4.53,
+					"isEmployee":0
+				}
+			},
+			{
+				"price":300,
+				"finishDate":"2016-05-13",
+				"id":10000002,
+                "payAnlistDate":"2016-05-13",
+                "payAnlistPrice":200,
+				"userByAnalystId":{
+					"realName":"aaa",
+					"phone":"18459189389",
+					"starAverage":4.53,
+					"isEmployee":0
+				}
+			},
+			{
+				"price":300,
+				"finishDate":"2016-05-13",
+				"id":10000002,
+                "payAnlistDate":null,
+                "payAnlistPrice":200,
+				"userByAnalystId":{
+					"realName":"aaa",
+					"phone":"18459189389",
+					"starAverage":4.53,
+					"isEmployee":0
+				}
+			}
+		],
+		"totalPage":9
+	},
+
+	"analysisApplyManage":{	
+		"list":[
+			{
+				"isEmployee":1,
+				"id":233,
+				"alipayAccount":"123456",
+				"selfIntroduction":"自我介绍",
+				"analyzeAbility":"分析技能",
+				"experience":"经验",
+				"user":{
+					"id":"0099",
+					"username":"Tom",
+					"realName":"aaa",
+					"phone":"18459189389"
+				}
+			},
+			{
+				"isEmployee":1,
+				"id":233,				
+				"alipayAccount":"123456",
+				"selfIntroduction":"1111111",
+				"analyzeAbility":"分析技能",
+				"experience":"经验",
+				"user":{
+					"id":"0099",
+					"username":"Tom",
+					"realName":"aaa",
+					"phone":"18459189389"
+				}
+			},
+			{
+				"isEmployee":1,
+				"id":233,				
+				"alipayAccount":"123456",
+				"selfIntroduction":"2222222",
+				"analyzeAbility":"分析技能",
+				"experience":"经验",
+				"user":{
+					"id":"0099",
+					"username":"Tom",
+					"realName":"aaa",
+					"phone":"18459189389"
+				}
+			}
+		],
+		"totalPage":9
+	},
+
+	"cancelAnalyst": true,
+
+	"VipHavePadOperation": true,
+	"VipCancelOperation": true,
+
+	"analysisHavePadOperation": true,
+	"analysisCancelOperation": true,
+
+	"returnMoneyOperation": true,
+
+	"ApplyPassOperation": true,
+	"ApplyNoPassOperation": true,
+
+	"System":{
+		"partTime": 0.9588,
+		"fullTime": 0.5
+	},
+
+	"SystemCtrl": false,
+
+	"totalUser": 90,
+	"totalAnalysis": 30,
+	"totalPartAnalysis": 20,
+	"totalFinishOrder": 120,
+	"totalNoFinishOrder": 20,
+	"totalVipUser": 5
+ }

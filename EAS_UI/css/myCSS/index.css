@@ -70,7 +70,13 @@ body {
 #theBrand {
 	font-size: 24px;
 }
-
+/*消息提示图标*/
+#newsTip{
+	display: inline;
+	font-weight: 800;
+	background-color: #FF4500;
+	color: #FFF;
+}
 /*小三角形*/
 .glyphicon-triangle-bottom {
 	/*柳色*/
@@ -101,7 +107,10 @@ body {
 	background-color: #333;
 
 }
-
+#linkVIP{
+	font-size: 15px;
+	color: #78a355;
+}
 /*子系统*/
 #smallSys {
 	font-size: 16px;

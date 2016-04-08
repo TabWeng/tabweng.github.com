@@ -32,7 +32,7 @@ function explainHeight() {
 	for(var i=0; i<getPicEle.length; i++){
 		// 把文字说明与图片等高
 		getWordEle[i].style["height"] = getPicEle[i].offsetHeight + "px";
-		
+
 	}
 }
 

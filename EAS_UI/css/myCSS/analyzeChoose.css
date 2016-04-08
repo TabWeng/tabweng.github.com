@@ -82,6 +82,10 @@ body {
 	color: #78a355;
 }
 
+#acContainer {
+	margin-top:30px;
+}
+
 /*==========================
 页头
 ==========================*/
@@ -121,6 +125,12 @@ body {
 	margin-top: 20px;
 	height: 100px;
 	background-color: #ccc;
+}
+
+
+/*标题样式*/
+#tabs-1 a {
+	font-size: 16px;
 }
 
 

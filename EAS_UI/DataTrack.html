@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>分析结果|教育大数据学习分析系统</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入按钮样式 -->
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+
+    <!-- 引入我们自己的css文件 -->
+    <link rel="stylesheet" type="text/css" href="css/myCSS/dataTrack.css">
+    <link rel="stylesheet" type="text/css" href="css/myCSS/index.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+
+<!-- #！bootstrap组件-导航条 -->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbarId">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- 响应式导航按钮 -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" id="theBrand"><span>EDAS</span>.COM</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
+      <!-- 小三角标签 -->
+<!--       <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" ></span>   -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" id="mediumWord">基于学立方数据学习分析系统</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="serviceHall.html">服务大厅</a></li>
+        <li><a href="news.html">消息<span class="badge" id="newsTip">!</span></a></li>
+        <li><a href="register.html">注册 | 登录</a></li>
+
+  <!--*登录后的显示*******************************************-->
+        <!-- 显示用户头像等 -->
+        <li>
+          <a href="#">
+            <!-- 头像 -->
+            <img id="myHeadPic" src="images/14.jpg">
+          </a>
+        </li>
+        <!-- 小三角标签 -->
+        <li class="dropdown">
+          <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></span>
+          <ul class="dropdown-menu" id="myClickPic">
+            <li><a>hlwyfeng</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="personalCenter.html">个人中心</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="vipPay.html"><span id="linkVIP">申请VIP</span></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">退出</a></li>
+          </ul>
+        </li>
+  <!--*结束**************************************************-->
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+  <!-- 载入子系统超链接 -->
+<!--   <div id="smallSysForLink">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+            <a href="" class="D-mediumWord" id="mediumWord"><span>基于学立方</span>数据学习分析系统</a> -->
+            <!-- <a href="#" class="button button-raised button-pill button-inverse">进入使用</a> -->
+<!--             <a href="" class="button button-primary hidden-xs" id="intoSmallSysBtn">进入使用</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</nav>
+
+<!-- 抵消固定导航的高度 -->
+<div id="myOffsetNav">
+</div>
+
+<!-- 编码内容开始*********************************************************************** -->
+
+<!-- 大容器,内容 -->
+<div class="container">
+
+<div class="row">
+    <div id="dataChoose" class="col-md-offset-2">
+    	<div id="inDataChoose">
+    	<form class="form-inline">
+    		<div>
+    			<p>请选择数据跟踪区间</p>
+    		</div>
+			
+			<div id="myTimeStyle">
+				<div class="col-md-4">
+					<span>起　</span>
+					<input type="text" class="form-control" id="beginTime" placeholder="请选择日期">
+				</div>
+				<div class="col-md-4">
+					<span>止　</span>
+					<input type="text" class="form-control" id="endTime" placeholder="请选择日期">
+				</div>
+			</div>
+
+			<div id="myOperationBtn" class="col-md-offset-9">
+				<button type="button" class="btn btn-default"> 确定分析 </button>
+				<button type="button" class="btn btn-default"> 导出PDF  </button>
+			</div>
+
+		</form>
+
+    	</div>
+    </div>
+</div>
+
+</div><!-- container -->
+
+<!-- 备注 -->
+<div class="container">
+	<div class="row" id="myArChooseBtn">
+		<div class="col-md-offset-2 col-md-10">
+			<div id="myRemark">
+				<div>
+					<p id="reRearkWord">备注</p>
+				</div>
+				<div id="remarkContent">
+					<!-- 备注的内容 -->
+					<p>
+						负责金融保险行业相关软件的设计、研发工作。
+						1、根据系统需求文档负责自己模块的详细设计； 
+						2、负责模块的代码开发； 
+						3、负责已开发模块的维护； 
+						4、相关技术文档的编写；,
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div> <!-- container -->
+
+<div class="container">
+	<div class="row">
+
+
+  <!-- 侧边栏**************************************************** -->
+  <div class="col-md-2 ">
+
+    <nav class="navbar navbar-inverse" id="myLeftBar">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNav" aria-expanded="false">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- 注意：下面的id="myNav"对应上面的data-target="myNav"才能隐藏 -->
+        <div class="collapse navbar-collapse" id="myNav">
+          <ul class="nav nav-stacked D-myContents">
+            <li>
+            	<p class="D-firstContent">总图</p>
+				<div class="D-mySecondLi">
+					<ul>
+						<li><a href="#section-1">分析分析分析分析分析</a></li>
+						<li><a href="#section-2">分析分析分析分析分析</a></li>
+						<li><a href="#section-3">分析分析分析分析分析</a></li>
+						<li><a href="#section-4">分析分析分析分析分析</a></li>
+						<li><a href="#section-5">分析分析分析分析分析</a></li>
+						<li><a href="#section-6">分析分析分析分析分析</a></li>
+					</ul>
+				</div>
+            </li>
+            <li>
+            	<p class="D-firstContent">二年级</p>  
+				<div class="D-mySecondLi">
+					<ul>
+						<li><a href="#section-1">分析分析分析分析分析</a></li>
+						<li><a href="#section-2">分析分析分析分析分析</a></li>
+						<li><a href="#section-3">分析分析分析分析分析</a></li>
+						<li><a href="#section-4">分析分析分析分析分析</a></li>
+						<li><a href="#section-5">分析分析分析分析分析</a></li>
+						<li><a href="#section-6">分析分析分析分析分析</a></li>
+					</ul>
+				</div>            	       	
+            </li>
+            <li>
+            	<p class="D-firstContent">三年级</p> 
+				<div class="D-mySecondLi">
+					<ul>
+						<li><a href="#section-1">分析分析分析分析分析</a></li>
+						<li><a href="#section-2">分析分析分析分析分析</a></li>
+						<li><a href="#section-3">分析分析分析分析分析</a></li>
+						<li><a href="#section-4">分析分析分析分析分析</a></li>
+						<li><a href="#section-5">分析分析分析分析分析</a></li>
+						<li><a href="#section-6">分析分析分析分析分析</a></li>
+					</ul>
+				</div>            	
+            </li>                                            
+            
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+  </div>
+
+
+
+  <!-- 右边内容************************************************** -->
+  <div class="col-md-10 ">
+
+    <!-- 每一行 -->
+    <div class="row D-rowStyle">
+        <!-- 图片 -->
+        <div class="col-md-7" id="section-1">
+          <!-- 图片后面的data-XX 为支持的模态框效果 -->
+          <!-- modealPic1 模态框的图片的id -->
+          <img class="D-myImg" src="images/10.jpg" data-toggle="modal" data-target="#modalPic1">
+        </div>
+        <!-- 文字 -->
+        <div class="col-md-5">
+          <div class="D-explain">
+            <h3>阿尔法围棋</h3>
+            <p class="h4 text-justify">
+              阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <!-- 每一行 -->
+    <div class="row D-rowStyle">
+        <!-- 图片 -->
+        <div class="col-md-7" id="section-2">
+          <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic2">
+        </div>
+        <!-- 文字 -->
+        <div class="col-md-5">
+          <div class="D-explain">
+            <h3>阿尔法围棋</h3>
+            <p class="h4 text-justify">
+              阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <!-- 每一行 -->
+    <div class="row D-rowStyle">
+        <!-- 图片 -->
+        <div class="col-md-7" id="section-3">
+          <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic3">
+        </div>
+        <!-- 文字 -->
+        <div class="col-md-5">
+          <div class="D-explain">
+            <h3>阿尔法围棋</h3>
+            <p class="h4 text-justify">
+              阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+            </p>
+          </div>
+        </div>
+    </div>
+
+  </div> <!-- 右边的内容 -->
+
+  <!-- 模态框显示放大的图片************************************** -->
+  <!-- Modal -->
+  <!-- 第一张图片 -->
+  <div class="modal fade" id="modalPic1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog D-modalPicSise" role="document">
+        <div data-dismiss="modal">
+          <!-- 模态框的图片 -->
+          <img src="images/10.jpg">
+
+        </div>
+    </div>
+  </div>
+
+    <!-- 第二张图片 -->
+  <div class="modal fade" id="modalPic2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog D-modalPicSise" role="document">
+        <div data-dismiss="modal">
+          <!-- 模态框的图片 -->
+          <img src="images/12.jpg">
+
+        </div>
+    </div>
+  </div>
+
+    <!-- 第三张图片 -->
+  <div class="modal fade" id="modalPic3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog D-modalPicSise" role="document">
+        <div data-dismiss="modal">
+          <!-- 模态框的图片 -->
+          <img src="images/12.jpg">
+
+        </div>
+    </div>
+  </div>
+
+
+
+</div> <!-- 总行row -->
+</div> <!-- container  -->
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- 单页面滑动跟随效果 -->
+    <script src="js/jquery.nav.js" type="text/javascript"></script>
+    <!-- 引入自己写的响应式页面插件 -->
+    <script src="js/myResponsive.js" type="text/javascript"></script>
+    <!-- 引入时间插件 -->
+    <script src="js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <!-- 我自己的JavaScript放在最下面 -->
+    <script src="js/myJS/responAnalyzeResult.js" type="text/javascript"></script>
+    <script src="js/myJS/dataTrack.js" type="text/javascript"></script>
+  </body>
+</html>

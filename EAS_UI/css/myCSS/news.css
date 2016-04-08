@@ -1,0 +1,20 @@
+.min-height{
+	height: 475px;
+}
+#orderSuccess,#orderCancel,#orderFinish{
+	margin-top: 10px;
+}
+.orderHead{
+	font-size: 25px;
+}
+.orderDetail{
+	display: block;
+	font-size: 20px;
+}
+.orderWord{
+	display: block;
+	float: left;
+}
+.no-padding{
+	padding: 0;
+}

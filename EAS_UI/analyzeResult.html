@@ -15,7 +15,7 @@
 
     <!-- 引入我们自己的css文件 -->
     <link rel="stylesheet" type="text/css" href="css/myCSS/analyzeResult.css">
-    <link rel="stylesheet" type="text/css" href="css/myCSS/index.css"> 
+    <link rel="stylesheet" type="text/css" href="css/myCSS/index.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,32 +39,58 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" id="theBrand"><span>EAS</span>.COM</a>
+      <a class="navbar-brand" href="#" id="theBrand"><span>EDAS</span>.COM</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
       <!-- 小三角标签 -->
-      <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" ></span>         
-      <ul class="nav navbar-nav navbar-right"> 
-        <li><a href="#">数据分析服务</a></li>
-        <li><a href="register.html">注册</a></li>
-        <li><a href="#">登录</a></li>
+<!--       <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" ></span>   -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" id="mediumWord">基于学立方数据学习分析系统</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="serviceHall.html">服务大厅</a></li>
+        <li><a href="news.html">消息<span class="badge" id="newsTip">!</span></a></li>
+        <li><a href="register.html">注册 | 登录</a></li>
+
+  <!--*登录后的显示*******************************************-->
+        <!-- 显示用户头像等 -->
+        <li>
+          <a href="#">
+            <!-- 头像 -->
+            <img id="myHeadPic" src="images/14.jpg">
+          </a>
+        </li>
+        <!-- 小三角标签 -->
+        <li class="dropdown">
+          <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></span>
+          <ul class="dropdown-menu" id="myClickPic">
+            <li><a>hlwyfeng</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="personalCenter.html">个人中心</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="vipPay.html"><span id="linkVIP">申请VIP</span></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">退出</a></li>
+          </ul>
+        </li>
+  <!--*结束**************************************************-->
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 
   <!-- 载入子系统超链接 -->
-  <div id="smallSysForLink">
+<!--   <div id="smallSysForLink">
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-            <a href="" class="D-mediumWord" id="mediumWord"><span>基于学立方</span>数据学习分析系统</a>
+            <a href="" class="D-mediumWord" id="mediumWord"><span>基于学立方</span>数据学习分析系统</a> -->
             <!-- <a href="#" class="button button-raised button-pill button-inverse">进入使用</a> -->
-            <a href="" class="button button-primary hidden-xs" id="intoSmallSysBtn">进入使用</a>
+<!--             <a href="" class="button button-primary hidden-xs" id="intoSmallSysBtn">进入使用</a>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </nav>
 
 <!-- 抵消固定导航的高度 -->
@@ -80,13 +106,13 @@
       <a href="" class="button button-block button-rounded button-action button-large">保存结果</a>
   </div>
   <div class="col-md-3">
-      <a href="" class="button button-block button-rounded button-action button-large">返回分析</a>
+      <a href="analyzeOperation.html " class="button button-block button-rounded button-action button-large">返回分析</a>
   </div>
 
 </div>
 
 
-<div class="row">  
+<div class="row">
 
   <!-- 侧边栏**************************************************** -->
   <div class="col-md-2">
@@ -134,7 +160,7 @@
             <h3>阿尔法围棋</h3>
             <p class="h4 text-justify">
               阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
-            </p>            
+            </p>
           </div>
         </div>
     </div>
@@ -151,7 +177,7 @@
             <h3>阿尔法围棋</h3>
             <p class="h4 text-justify">
               阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
-            </p>            
+            </p>
           </div>
         </div>
     </div>
@@ -168,7 +194,7 @@
             <h3>阿尔法围棋</h3>
             <p class="h4 text-justify">
               阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
-            </p>            
+            </p>
           </div>
         </div>
     </div>
@@ -214,9 +240,9 @@
 
 </div> <!-- 总行row -->
 </div> <!-- 大容器container  -->
-    
-     
-    
+
+
+
 
 
 
@@ -225,7 +251,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <!-- 单页面滑动跟随效果 -->
-    <script src="js/jquery.nav.js" type="text/javascript"></script>  
+    <script src="js/jquery.nav.js" type="text/javascript"></script>
     <!-- 引入自己写的响应式页面插件 -->
     <script src="js/myResponsive.js" type="text/javascript"></script>
     <!-- 我自己的JavaScript放在最下面 -->

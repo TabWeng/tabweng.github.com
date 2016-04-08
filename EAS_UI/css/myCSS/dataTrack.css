@@ -1,0 +1,210 @@
+
+/****************************************基本布局*/
+/*限制图片的最大宽度*/
+.D-myImg {
+	width: 100%;
+	max-width: 550px;
+
+	height: 100%;
+	max-height: 500px;
+
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+/*文字说明*/
+.D-explain {
+	height: 100%;
+	background-color: #F1BC70;
+	overflow: auto;
+
+	padding: 10px 15px;
+
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+.D-explain h3 {
+	text-align: center;
+}
+
+.D-explain p {
+	line-height: 1.5;
+}
+
+/*设置每行的间隔*/
+.D-rowStyle {
+	margin-bottom: 10px;
+}
+
+/*抵消导航的高度*/
+#myOffsetNav {
+	height: 60px;
+}
+
+#myNav {
+	position: fixed;
+	left:50px;
+	top: 77px;
+	width: 200px;
+	text-align: center;
+	font-size: 14px;
+}
+
+/* 目录的背景*/
+.D-myContents {
+	width: 180px;
+	max-height: 560px;
+	overflow: auto;
+}
+
+.D-myContents li {
+	background-color: #BCEE68;
+	cursor: pointer;
+}
+
+#myNav p {
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 1px;
+}
+
+
+/*******************************************模态框设置*/
+/*居中*/
+.D-modalPicSise {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/*重写booststap的样式，用来居中*/
+.modal-dialog {
+	width:auto;
+}
+
+/*******************************************分析操作*/
+#myArChooseBtn {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#myArChooseBtn a {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+
+/*******************************************左边侧边栏的使用效果*/
+.nav > li > a {
+}
+
+
+/*日期操作选择页面*/
+#dataChoose {
+	padding: 15px;
+	padding-bottom: 5px;
+}
+
+/*里面*/
+#inDataChoose {
+	border: 3px solid #3EB991;
+	border-radius: 5px;
+	padding-bottom: 15px;
+}
+
+#inDataChoose p {
+	font-size: 23px;
+	margin: 10px;
+}
+
+#inDataChoose input {
+	display: inline-block;
+}
+
+#inDataChoose span {
+	font-size: 20px;
+	color: #fff;
+}
+
+#inDataChoose button{
+	font-size: 18px;
+	border: none;
+	box-shadow: 1px 0 10px #ccc;
+	margin-left: 5px;
+}
+
+#inDataChoose button:hover {
+	background-color: #F0FFFF;
+}
+
+#myTimeStyle {
+	background-color: #3EB991;
+	overflow: hidden;
+	padding: 10px 0;
+}
+
+#myOperationBtn {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+/********************************************备注的内容*/
+#myRemark{
+	background-color: #fff;
+	min-height: 40px;
+	padding: 15px;
+	box-shadow: 1px 0 10px #ccc;
+}
+
+#reRearkWord{
+	font-size: 20px;
+}
+
+/*内容*/
+#remarkContent {
+	border: 3px solid #ccc;
+	border-radius: 5px;
+	padding: 15px;
+	font-size: 16px;
+}
+
+/*二级目录********************************/
+
+.D-mySecondLi {
+	overflow:hidden;
+/*	position: absolute;
+	left: 132px;
+	top: 0;*/
+	/*display: none;*/
+}
+
+.D-mySecondLi ul {
+	position: relative;
+	left: -40px;
+}
+
+.D-mySecondLi ul li{
+	background-color: #F0FFFF;
+	list-style: none;
+	width: 180px;
+	border: 1px solid #ccc;
+	cursor: auto;
+	
+}
+
+.D-mySecondLi ul li:hover {
+	background-color: #ccc;
+}
+
+.D-mySecondLi a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+}
+
+/*显示*/
+.D-view {
+	display: block;
+}

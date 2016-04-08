@@ -1,0 +1,175 @@
+
+/*基本样式*/
+body {
+	background: #F7F7F7;
+}
+
+/*居中*/
+.D-intoCenter {
+	text-align: center;
+}
+
+/*常用大字体*/
+.D-bigWord-B {
+	font-size: 35pt;
+}
+.D-bigWord-M {
+	font-size: 30pt;
+}
+.D-bigWord-S {
+	font-size: 25pt;
+}
+
+/*常用中字体*/
+.D-mediumWord {
+	font-size: 19pt;
+}
+/*常用小字体*/
+.D-littleWord {
+	font-size: 15pt;
+}
+
+/*清除浮动*/
+.D-eas-clearFix:after{
+    clear: both;
+    display: block;
+    visibility: hidden; /*设置不可见*/
+    height: 0;
+    line-height: 0;
+    content: ""; /*after伪对象必须的属性，可以设置内容为空*/
+}
+
+.D-eas-clearFix {}
+
+/*分隔举例*/
+.hrMargin {
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	background: #F7F7F7;
+}
+
+
+/*==========================
+导航条
+==========================*/
+#navbarId {
+	height: 60px;
+}
+
+#navbarId .container {
+	margin-top: 4px;
+	font-size: 16px;
+}
+
+/*域名链接*/
+#theBrand {
+	font-size: 24px;
+}
+
+/*小三角形*/
+.glyphicon-triangle-bottom {
+	/*柳色*/
+	color: #78a355;
+}
+
+/*子系统*/
+#smallSys {
+	font-size: 16px;
+}
+
+#theBrand {
+	color: #fff;
+	font-weight: 800;
+}
+
+#theBrand span {
+	color: #78a355;
+}
+
+/*==========================
+页头
+==========================*/
+.page-header {
+	margin-top: 40px;
+}
+
+/*大标题*/
+#headWord {
+	position: absolute;
+	height: 500px;
+	width: 100%;
+}
+
+/*个人中心*/
+#headline{
+	margin-top: 20px;
+	font-size: 50px;
+	color: #78a355;
+}
+#apply{
+	display: block;
+	margin-top: 33px;
+}
+#analystEntrance{
+	display: none;
+	margin-top: 33px;
+}
+#firstLine{
+	border-bottom: 1px solid #78a355;
+	margin-top: 10px;
+}
+#userInfo{
+	margin-top: 20px;
+}
+#userType,#normalUser{
+	float: left;
+	display: block;
+	font-size: 15pt;
+	color: #78a355;
+}
+.btnGroup{
+	margin-top: 20px;
+}
+#secondLine{
+	border-bottom: 1px solid #78a355; 
+	margin-top: 20px;
+}
+
+.tab-content{
+	background-color: #FFF;
+}
+.no-padding{
+	padding: 0;
+}
+#plans{
+	margin-top: 20px;
+}
+.planBox{
+	text-align: center;
+}
+.picBox{
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+}
+.miniPic{
+	width: 240px;
+	height: 180px;
+	margin: auto;
+}
+.pagi{
+	display: block;
+	text-align: center;
+}
+
+/*=====================
+页尾
+=====================*/
+.D-footer .row {
+	margin-top: 20px;
+	height: 100px;
+	background-color: #ccc;
+}
+
+

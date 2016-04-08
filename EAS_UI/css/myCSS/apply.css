@@ -1,0 +1,31 @@
+.Dinput{
+width: 100%;
+resize:none;
+
+}
+
+
+#Pheader{
+
+	text-align: center;
+}
+#D-footer{
+margin-top: 80px;
+
+}
+
+.error {
+   color: #a94442;
+  background-color: #f2dede;
+  border-color: #a94442;
+}
+
+.D-myContainer {
+	background-color: #fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-shadow: 1px 0 10px #ccc;
+	border-radius: 10px;
+}

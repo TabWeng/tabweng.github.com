@@ -1,10 +1,214 @@
 #conInTro {
 	height: 300px;
-	background-color: red;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
 }
 
 #inTro {
+	height: 220px;
+	background-color: #fff;
+	overflow: auto;
+	border-radius: 10px;
+	opacity: 0.8;
+}
+
+/*介绍内容*/
+#introduceWord {
+	padding: 15px 8px;
+	font-size: 18px;
+}
+
+#myImgBackgorund {
+	position: absolute;
+	left: 0;
+	width: 100%;
 	height: 300px;
-	background-color: yellow;
-	overflow:auto;
+}
+
+/*遮罩层*/
+#grayShade {
+	position: absolute;
+	width: 100%;
+	background-color: #000;
+	height: 300px;
+	opacity: 0.4;
+}
+
+/*数据下载按钮*/
+.D-myDataDownload {
+	display: inline-block;
+	padding-left: 0;
+	padding-right: 0;
+	width:100px;
+}
+
+/*控制container的边距*/
+.D-containerBorder {
+	padding:20px;
+}
+
+/*数据样式下载这里的框框*/
+.D-secondRow {
+	padding: 20px 10px 10px 10px;
+	background-color: #fff;
+	box-shadow: 1px 0 10px #ccc;
+	border-radius: 10px;
+}
+
+/*控制字体*/
+.D-fontSize {
+	font-size: 20px;
+}
+
+/*大区域*/
+.D-OperationContainer {
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 1px 0 10px #ccc;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+/*控制功能区框框的大小*/
+.D-contrlFunction {
+	padding: 10px 30px;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #EBEBEB;
+	box-shadow: 1px 0 10px #555;
+	
+}
+
+.D-contrlFunction2 {
+	padding: 10px 30px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+
+/*控制功能区选项*/
+.D-ctrlChoose {
+	margin-top: 8px;
+}
+
+/*微调-可选*/
+.D-canChooseWord {
+	font-size: 18px;
+	line-height: 35px;
+}
+
+/*功能文字标题（体验，使用）*/
+.D-functionTitle {
+	margin-top: 10px;
+	font-size: 25px;
+	font-family: Microsoft JHenghei;
+}
+
+/*上传文件样式*/
+.D-myInputFile {
+	width: 100%;
+	opacity: 0;
+	cursor: pointer;
+	position: absolute;
+	top:0;
+}
+
+/*上传文件的div*/
+.D-myDivInputFile {
+	overflow: hidden;
+	position: relative;
+	height: 34px;
+	line-height: 34px;
+	border-radius: 5px;
+	background-color: #fff;
+	font-size: 15px;
+	text-align: center;
+	border: 1px solid #ccc;
+	color: #666;
+}
+
+/*限制文件上传类型*/
+.D-limitUpData {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+/*隐藏高级功能*/
+#hiddenProFuntion {
+	opacity: 0;
+}
+
+/*高级功能区*/
+.D-help {
+	text-align: right;
+	font-size: 20px;
+}
+
+.D-CtrlMargin {
+	margin-bottom: 10px;
+}
+
+.D-CtrlMargin a{
+	font-size: 20px;
+	font-family: Microsoft JHenghei;
+	font-weight: 500;
+	border: 4px solid #A7DF3C;
+	line-height: 31px;
+}
+
+
+/*连接数据库并分析*/
+#myLeftFixed {
+	margin-top: 60px;
+	width: 330px;
+	height: 900px;
+	background-color: #F7F7F7;
+	border-right: 10px solid #78a355;
+	position: fixed;
+	left: -330px;
+	top: 0;
+	color: #000;
+}
+
+/*标签 + 输入框*/
+.D-leftInput {
+	font-size: 18px;
+	background-color: #fff;
+	padding: 30px 17px 20px 13px;
+	margin: 25px 10px 10px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 1px 0 5px #555;
+}
+
+.D-myPandInput {
+	text-align: right;
+}
+
+.D-leftInput p {
+	margin-bottom: 20px;
+}
+
+#myLeftFixed button {
+	font-size: 16px;
+	box-shadow: 1px 0px 5px #999;
+}
+
+.D-leftInput img {
+	width: 210px;
+	margin-bottom: 20px;
+}
+
+/*IP输入框*/
+.D-inputStyle {
+	font-size: 16px;
+	margin-left: 10px;
+	display: inline-block;
+	width: 200px;	
+}
+
+#LineCancelBtn {
+	margin-top: 10px;
 }

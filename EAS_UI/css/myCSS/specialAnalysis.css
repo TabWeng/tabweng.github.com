@@ -1,0 +1,135 @@
+.Dinput{
+width: 100%;
+resize:none;
+
+}
+#submitBtn{
+position: absolute;
+right: 15px;
+
+}
+ #search{
+padding-right: 15px;
+padding-left: 15px;
+ } 
+ .line{
+ 	margin-top: 80px;
+ 	border-color: gray;
+ }
+  
+ #Dlabel{
+
+ 	margin-top: 10px;
+ }
+
+ 
+ 
+
+/*设置分隔线的样式*/
+.D-lineStyle {
+	border-color: #999;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+
+
+ 
+/*表格头的样式*/
+.D-thead {
+	background-color: #EBEBEB;
+}
+
+/*表格内容样式*/
+.D-myTabContent {
+	background-color: #fff;
+}
+
+
+ 
+
+/*翻页，上一页，下一页*/
+.D-myNavPage {
+	float:right;
+}
+
+.D-myNavPage ul li a:hover{
+	color: #fff;
+	background-color: #BCEE68;
+}
+
+
+.D-havePadBtn {
+	height: 30px;
+	line-height: 30px;
+	font-size:15px;
+
+	 
+}
+.Dbtn{
+	margin-top: 5px;
+	 width: 100%
+}
+ 
+
+
+/*表格样式的补充*/
+.D-someTableStyle {
+	background-color: #fff;
+}
+
+#chose{
+	margin-top: 100px;
+	display: none;
+}
+
+/*分页*/
+.pagi{
+	display: block;
+	text-align: center;
+}		
+#Dtitle{
+	padding-left: 15px;
+}
+.yOn{
+	background-color: white;
+ 	cursor: pointer;
+ 	margin-left: 10px;
+ 	color: gray;
+
+}
+ .yOn:hover{
+background-color: white;
+color: rgb(255,96,0);
+
+ }
+#Dinpt{
+	background-color: white;
+}
+ .PriceIsF{
+	display: none;
+
+ }
+ .error {
+   color: #a94442;
+  background-color: #f2dede;
+  border-color: #a94442;
+}
+#Pay_title{
+    text-align: center;
+  }
+  .D_label{
+    text-align: right;
+  }
+  #P_title{
+    text-align: center;
+  }
+  .table_label{
+  	text-align:left;
+  }
+
+
+  /*设置字体大小*/
+  #payForm {
+  	font-size: 15px;
+  }

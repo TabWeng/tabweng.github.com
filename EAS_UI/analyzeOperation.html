@@ -12,9 +12,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入按钮样式 -->
     <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <!-- 引入load样式 -->
+    <link rel="stylesheet" type="text/css" href="css/waitMe.min.css">
     <!-- 引入我们自己的css文件 -->
-    <link rel="stylesheet" type="text/css" href="css/myCSS/index.css">
     <link rel="stylesheet" type="text/css" href="css/myCSS/analyzeOperation.css">
+    <link rel="stylesheet" type="text/css" href="css/myCSS/index.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,7 +40,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" id="theBrand"><span>EAS</span>.COM</a>
+      <a class="navbar-brand" href="#" id="theBrand"><span>EDAS</span>.COM</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
@@ -45,9 +48,9 @@
 <!--       <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" ></span>   -->       
       <ul class="nav navbar-nav navbar-right"> 
         <li><a href="#" id="mediumWord">基于学立方数据学习分析系统</a></li>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">服务大厅</a></li>
-        
+        <li><a href="index.html">首页</a></li>
+        <li><a href="serviceHall.html">服务大厅</a></li>
+        <li><a href="news.html">消息<span class="badge" id="newsTip">!</span></a></li>
         <li><a href="register.html">注册 | 登录</a></li>
         
   <!--*登录后的显示*******************************************-->
@@ -64,7 +67,9 @@
           <ul class="dropdown-menu" id="myClickPic">
             <li><a>hlwyfeng</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">个人中心</a></li>
+            <li><a href="personalCenter.html">个人中心</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="vipPay.html"><span id="linkVIP">申请VIP</span></a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">退出</a></li>
           </ul>
@@ -97,10 +102,182 @@
 
 <div class="container-fluid" id="conInTro">
   <div class="row">
+    <!-- 简介背景 -->
+    <img id="myImgBackgorund" src="images/bigData.jpg">
+    <!-- 遮罩层 -->
+    <div id="grayShade"></div>
+    
+    <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8">
+      <h3 style="color:#fff; font-family: Microsoft JHenghei">方案简介</h3>
+    </div>
+
     <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8" id="inTro">
-      <p>
+      <p id="introduceWord">
+		自1970年起，软件开发进入了软件工程阶段。由于“软件危机”的产生，迫使人们不得不研究、改变软件开发的技术手段和管理方法。从此软件产生进入了软件工程时代。此阶段的特点是：硬件已向巨型化、微型化、网络化和智能化四个方向发展，数据库技术已成熟并广泛应用，第三代、第四代语言出现；第一代软件技术：结构化程序设计在数值计算领域取得优异成绩；第二代软件技术：软件测试技术、方法、原理用于软件生产过程；第三代软件技术：处理需求定义技术用于软件需求分析和描述。
       </p>
     </div>
+
+  </div>
+</div>
+
+<div class="container D-containerBorder">
+  <div class="row D-secondRow">
+      
+      <!-- 数据样式 -->
+      <div class="col-md-4 col-sm-4" id="myDataColOne">
+        <p class="D-fontSize">数据样式：
+          <a href="" class="button button-block button-rounded button-action D-myDataDownload">下载</a>
+        </p>
+      </div>
+      
+      <!-- 收藏方案 -->
+      <div class="col-md-offset-6 col-md-2 col-sm-offset-5 col-sm-3" id="myDataColTwo">
+        <a href="" class="button button-block button-rounded button-highlight D-myDataDownload">收藏本方案</a>
+      </div>
+  </div> 
+</div>
+
+<!-- 操作内容 -->
+<div class="container D-OperationContainer">
+  <div class="row">
+    
+    <!-- 第一个模块 -->
+    <div class="col-md-4">
+      <p class="D-functionTitle">体验</p>
+      <div class="D-contrlFunction">
+       	<!-- 第一层 -->
+        <div>
+          <div class="col-md-12 D-ctrlChoose">
+            <select class="form-control">
+              <option>请选择测试分析数据文件</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 第二层 -->
+        <div>
+          <div class="col-md-9 col-sm-10 col-xs-9 D-ctrlChoose">
+            <select class="form-control">
+              <option>常模数据文件</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3 col-sm-2 col-xs-3 D-ctrlChoose">
+            <p class="D-canChooseWord">可选</p>
+          </div>
+        </div> 
+
+        <!-- 第三层 -->
+        <div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <a href="analyzeResult.html" class="button button-block button-rounded button-action">开始体验</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- 第二个模块 -->
+    <div class="col-md-4">
+
+      <p class="D-functionTitle">使用</p>
+      <div class="D-contrlFunction">
+        <!-- 第一层 -->
+        <div>
+          <div class="col-md-9 col-sm-10 col-xs-9 D-ctrlChoose">
+            <!-- 上传文件外层div -->
+            <div class="D-myDivInputFile">
+              <!-- 上传文件 -->
+              上传本地数据文件
+              <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+              <input type="file" id="myInputFile" class="D-myInputFile">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-2 col-xs-3 D-ctrlChoose">
+            <p class="D-limitUpData">csv,xls</p>
+          </div>
+        </div>
+
+        <!-- 第二层 -->
+        <div>
+          <div class="col-md-9 col-sm-10 col-xs-9 D-ctrlChoose">
+            <!-- 上传文件外层div -->
+            <div class="D-myDivInputFile">
+              <!-- 上传文件 -->
+              上传本地常模文件
+              <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+              <input type="file" id="myInputFile" class="D-myInputFile">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-2 col-xs-3 D-ctrlChoose">
+            <p class="D-canChooseWord">可选</p>
+          </div>
+        </div> 
+
+        <!-- 第三层 -->
+        <div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <a href="analyzeResult.html" class="button button-block button-rounded button-action">分析</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 第三个模块 -->
+    <div class="col-md-4">
+      <p class="D-functionTitle" id="hiddenProFuntion">高级功能</p>
+      <div class="D-contrlFunction2">
+        <p class="D-help"><a href="">使用帮助</a></p>
+        <div class="D-CtrlMargin">
+          <a href="DataTrack.html" class="button button-block button-rounded">数据跟踪</a>
+        </div>
+        <div class="D-CtrlMargin">
+          <a id="LinkDataBase" class="button button-block button-rounded">连接数据库并分析</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 连接数据库并分析 -->
+<div id="myLeftFixed">
+
+  <div class="D-leftInput">
+    <form action="" method="post">
+      <div>
+        <img src="images/mysql.jpg">
+        <div class="D-myPandInput">
+          <p>
+            IP地址
+            <input type="text" class="form-control D-inputStyle" placeholder="输入IP">
+          </p>
+          <p>
+            端口
+            <input type="text" class="form-control D-inputStyle" placeholder="输入端口">
+          </p> 
+          <p>
+            库名
+            <input type="text" class="form-control D-inputStyle" placeholder="输入库名">
+          </p>                
+          <p>
+            用户名
+            <input type="text" class="form-control D-inputStyle" placeholder="输入用户名">
+          </p> 
+          <p>
+            密码
+            <input type="text" class="form-control D-inputStyle" placeholder="输入密码">
+          </p> 
+        </div>
+        <button id="submitLink" type="button" class="btn btn-block">连接并分析</button>
+      </div>  
+    </form>
+        <button  id="LineCancelBtn" type="button" class="btn btn-block">取消</button>
   </div>
 </div>
 
@@ -108,20 +285,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!--编码内容结束************************************************************-->
 
+<!-- 页尾 -->
 <!-- 页尾 -->
 <div class="D-footer">
   <div class="container">
@@ -140,7 +306,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- 引入自己写的响应式页面插件 -->
     <script src="js/myResponsive.js" type="text/javascript"></script>
+    <script src="js/waitMe.min.js" type="text/javascript"></script>
     <!-- 我自己的JavaScript -->
-    
+    <script src="js/myJS/analyzeOperation.js" type="text/javascript"></script>
   </body>
 </html>

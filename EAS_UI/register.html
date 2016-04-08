@@ -42,7 +42,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" id="theBrand"><span>EAS</span>.COM</a>
+      <a class="navbar-brand" href="#" id="theBrand"><span>EDAS</span>.COM</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
@@ -50,9 +50,9 @@
 <!--       <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" ></span>   -->       
       <ul class="nav navbar-nav navbar-right"> 
         <li><a href="#" id="mediumWord">基于学立方数据学习分析系统</a></li>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">服务大厅</a></li>
-        
+        <li><a href="index.html">首页</a></li>
+        <li><a href="serviceHall.html">服务大厅</a></li>
+        <li><a href="news.html">消息<span class="badge" id="newsTip">!</span></a></li>
         <li><a href="register.html">注册 | 登录</a></li>
         
   <!--*登录后的显示*******************************************-->
@@ -69,7 +69,9 @@
           <ul class="dropdown-menu" id="myClickPic">
             <li><a>hlwyfeng</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">个人中心</a></li>
+            <li><a href="personalCenter.html">个人中心</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="vipPay.html"><span id="linkVIP">申请VIP</span></a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">退出</a></li>
           </ul>
@@ -102,7 +104,7 @@
       <div id="registerId">
         <p class="h3 D-intoCenter">用户注册</p>
         <!-- 表单 -->
-        <form id="registerForm" action="" method="post">
+        <form id="registerForm" action="${pageContext.request.contextPath }/user_register" method="post">
           <!-- 用户名 -->
           <div class="form-group D-inputMaxWidth">
             <input id="regUser" type="text" class="form-control D-form validate[required]" placeholder="注册用户名">
@@ -123,42 +125,37 @@
             <input type="password" class="form-control D-form validate[required,equals[accountPwd]]" id="re-accountPwd" placeholder="重新输入密码">
           </div>
           <div class="form-group D-inputMaxWidth">
-            <input type="text" class="form-control D-form validate[custom[phone]]" id="mobile" name="mobile" placeholder="手机号码">
+            <input type="text" class="form-control D-form validate[custom[phone]] validate[required" id="mobile" name="mobile" placeholder="手机号码">
           </div>
           
           <!-- 验证手机号码，调用短信API -->
           <div class="row form-group D-inputMaxWidth">
             <div class="clearLeftPadding form-group col-md-7">
-              <input type="text" class="form-control D-form" name="mobile_code" id="phoneNum" placeholder="输入手机验证码">
+              <input type="text" class="form-control D-form" name="validateCode" id="phoneNum" placeholder="输入手机验证码">
             </div>
             <div class="col-md-1"></div>
             <div class="clearRightPadding form-group col-md-4">
-             <input id="zphone" class="form-control D-form-1" type="button" value=" 发送手机验证码" onClick="get_mobile_code();">
+             <input id="zphone" class="form-control D-form-1" type="button" value=" 发送手机验证码" >
             </div>
           </div>
 
           <!-- 同意用户条款(备份) -->
-<!--           <div class="form-group D-inputMaxWidth">
-            <div class="checkbox">
+          <div class="form-group D-inputMaxWidth">
+            <div class="checkbox" style="text-align: center;">
               <label>
-                <input type="checkbox">
+                <input id="myCheckBox" type="checkbox">
                 <a href="#">同意使用条款</a>
               </label> 
             </div>           
-          </div> -->
+          </div>
           <!-- 确认注册 -->
-          <a href="#" id="finishReg" class=" button button-block button-rounded button-action button-large">注册</a>            
+          <a id="finishReg" class=" button button-block button-rounded button-action button-large">注册</a>            
 
         </form>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -171,6 +168,125 @@
     <!-- 引入Less.js -->
     <script src="js/less.min.js" type="text/javascript"></script>
     <!-- 我自己的JavaScript放在最下面 -->
+    
+    <script type="text/javascript">
+          
+        $(function() {
+
+          $("#regUser")[0].value = '';
+          $("#phoneNum")[0].value = '';
+          document.getElementById('zphone').disabled = false;
+
+          // 注册判断用户名判断
+          var flag1 = false;
+          $("#regUser").blur(function(){
+            var username = "username=" + $("#regUser")[0].value;
+           
+            if($("#regUser")[0].value != ''){
+        
+              $.getJSON("${pageContext.request.contextPath}/user_existUsername",username,function(result){
+                if(result.existUsername == 'true'){
+                  $("#regUser").after("<p id='promptRegUser' class='D-hint' style='color: red;'>用户名已存在！</p>");
+                    flag1 = false;
+                }else{
+                  flag1 = true;
+                }
+              });
+
+              $("#regUser").focus(function(){
+                $("#promptRegUser").remove();
+              });
+            }
+
+          });
+
+          // 验证码判断
+          var flag2 = false;
+          $("#phoneNum").blur(function(){
+            var validatecode = "validateCode=" + $("#phoneNum")[0].value;
+         
+            if($("#phoneNum")[0].value != ''){         
+              $.get("${pageContext.request.contextPath}/user_checkValidateCode",validatecode,function(result){
+                 if(result == "false"){
+                  $("#phoneNum").after("<p id='validate' class='D-hint' style='color: red;'>验证码不正确！</p>");
+                    flag2 = false;
+                 }else{
+                  flag2 = true;
+                 }
+              },"text");
+
+              $("#phoneNum").focus(function(){
+                $("#validate").remove();
+              });
+            }
+          });
+
+        // 手机验证码判断 - 来自短信api
+        $("#zphone").click(function(){
+          if($("#mobile")[0].value == ''){
+            alert("请先输入手机号码！");
+          }else{
+            get_mobile_code();            
+          }
+        });
+
+        function get_mobile_code(){
+              $.post('${pageContext.request.contextPath}/user_sendValidateCode', {mobile:jQuery.trim($('#mobile').val())}, function(msg) {
+            if(msg=='提交成功'){
+              RemainTime();
+            }
+              });
+        };
+
+        var iTime = 59;
+        var Account;
+
+        function RemainTime(){
+          $("#zphone").css({"background-color":"#B9E563"});
+          document.getElementById('zphone').disabled = true;
+          var iSecond,sSecond="",sTime="";
+          if (iTime >= 0){
+            iSecond = parseInt(iTime%60);
+            iMinute = parseInt(iTime/60)
+            if (iSecond >= 0){
+              if(iMinute>0){
+                sSecond = iMinute + "分" + iSecond + "秒";
+              }else{
+                sSecond = iSecond + "秒";
+              }
+            }
+            sTime=sSecond;
+            if(iTime==0){
+              clearTimeout(Account);
+              sTime='获取手机验证码';
+              iTime = 59;
+              document.getElementById('zphone').disabled = false;
+            }else{
+              Account = setTimeout(function(){RemainTime()},1000);
+              iTime=iTime-1;
+            }
+          }else{
+            sTime='没有倒计时';
+          }
+          document.getElementById('zphone').value = sTime;
+        } 
+
+        // 点击注册
+        $("#finishReg").click(function(){ 
+
+            if(flag1 && flag2){
+              if($("#myCheckBox").get(0).checked){
+                $("#registerForm").submit();    
+              }else{
+                alert("注册需要同意使用条款！");
+              }    
+            }
+        });
+
+    }); //document
+
+    </script>
+
     <script src="js/myJS/register.js" type="text/javascript"></script>
   </body>
 </html>

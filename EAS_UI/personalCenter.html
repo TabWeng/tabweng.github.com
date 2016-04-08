@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>教育大数据学习分析系统</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入按钮样式 -->
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <!-- 引入我们自己的css文件 -->
+    <link rel="stylesheet" type="text/css" href="css/myCSS/index.css">
+    <link rel="stylesheet" type="text/css" href="css/myCSS/personalCenter.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+    <body>
+    
+<!-- #！bootstrap组件-导航条 -->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbarId">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- 响应式导航按钮 -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" id="theBrand"><span>EDAS</span>.COM</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
+      <!-- 小三角标签 -->
+<!--       <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" ></span>   -->       
+      <ul class="nav navbar-nav navbar-right"> 
+        <li><a href="#" id="mediumWord">基于学立方数据学习分析系统</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="serviceHall.html">服务大厅</a></li>
+        <li><a href="news.html">消息<span class="badge" id="newsTip">!</span></a></li>
+        <li><a href="register.html">注册 | 登录</a></li>
+        
+  <!--*登录后的显示*******************************************-->
+        <!-- 显示用户头像等 -->
+        <li>
+          <a href="#">
+            <!-- 头像 -->
+            <img id="myHeadPic" src="images/14.jpg">
+          </a>
+        </li>
+        <!-- 小三角标签 --> 
+        <li class="dropdown">
+          <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></span>
+          <ul class="dropdown-menu" id="myClickPic">
+            <li><a>hlwyfeng</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="personalCenter.html">个人中心</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="vipPay.html"><span id="linkVIP">申请VIP</span></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">退出</a></li>
+          </ul>
+        </li>
+  <!--*结束**************************************************-->
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+  <!-- 载入子系统超链接 -->
+<!--   <div id="smallSysForLink">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+            <a href="" class="D-mediumWord" id="mediumWord"><span>基于学立方</span>数据学习分析系统</a> -->
+            <!-- <a href="#" class="button button-raised button-pill button-inverse">进入使用</a> -->
+<!--             <a href="" class="button button-primary hidden-xs" id="intoSmallSysBtn">进入使用</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</nav>
+
+<!-- 抵消固定导航的高度 -->
+<div id="myOffsetNav">
+</div>
+
+<!--编码内容开始*************************************************************-->
+
+<!--个人中心-->
+<div class="container"> 
+  <div class="row">
+  <!--标题栏，包含申请成为分析师和分析师入口-->
+    <div class="col-md-12">
+      <div class="col-md-4 col-sm-4 col-xs-12" id="headline">
+        <p>个人中心</p>
+      </div>
+      <div class="col-md-5 col-sm-4"></div>
+      <div class="col-md-3 col-sm-4 col-xs-12" id="apply">
+        <a href="apply.html " class="btn btn-info btn-lg col-md-12 col-xs-12">申请成为分析师</a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12" id="analystEntrance">
+        <a href="" class="btn btn-info btn-lg col-md-12 col-xs-12">分析师入口</a>
+      </div>
+    </div>
+    <!--第一条分割线-->
+    <div class="col-md-12 col-sm-12 col-xs-12" id="firstLine"></div>
+    <!--用户信息，申请VIP-->
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="col-md-4 col-sm-6 col-xs-12" >
+        <div class="col-md-12 col-sm-12 col-xs-12" id="userInfo">
+          <span id="userType">用户类型：</span>
+          <label id="normalUser">普通用户</label>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-2"></div>
+    </div>
+    <!--按钮组-->
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-2 col-sm-3 col-xs-12 btnGroup">
+          <a href="specialAnalysis.html" class="btn btn-success col-xs-12">专向分析</a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-xs-12 btnGroup">
+          <a href="" class="btn btn-primary col-xs-12">账号设置</a>
+        </div>
+      </div>
+    </div>
+    <!--第二条分割线-->
+    <div class="col-md-12 col-sm-12 col-xs-12" id="secondLine"></div>
+    <!--方案内容-->
+    <div class="col-md-12 col-sm-12 col-xs-12" id="plans">
+      <div class="span12">
+        <div class="row">
+          <div class="span12">
+            <div class="tabbable" id="tabs-64405">
+              <ul class="nav nav-tabs">
+                <li class="active">
+                  <a href="#collePlans" data-toggle="tab">收藏的方案</a>
+                </li>
+                <li>
+                  <a href="#specialPlans" data-toggle="tab">定制的方案</a>
+                </li>
+                <li>
+                  <a href="#myWorks" data-toggle="tab">我的作品</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="collePlans">
+                  <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="analyzeOperation.html" class="picBox">
+                        <img src="images/1.jpg" alt="分析方案1" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/2.jpg" alt="分析方案2" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/3.jpg" alt="分析方案3" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/4.jpg" alt="分析方案4" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/4.jpg" alt="分析方案4" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                  </div>
+                  <nav class="pagi" id="pagi-1">
+                    <ul class="pagination pagination-lg">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+                <div class="tab-pane" id="specialPlans">
+                  <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/5.jpg" alt="分析方案1" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/6.jpg" alt="分析方案2" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/7.jpg" alt="分析方案3" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/8.jpg" alt="分析方案4" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/8.jpg" alt="分析方案4" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+
+                  </div>
+                  <nav class="pagi" id="pagi-2">
+                    <ul class="pagination pagination-lg">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+                <div class="tab-pane" id="myWorks">
+                  <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/3.jpg" alt="分析方案1" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/8.jpg" alt="分析方案2" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/1.jpg" alt="分析方案3" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/9.jpg" alt="分析方案4" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="planBox no-padding col-md-3 col-sm-6">
+                      <a href="" class="picBox">
+                        <img src="images/9.jpg" alt="分析方案4" class="img-rounded miniPic">
+                        <br>
+                        <h4>学生各科总体学习情况分析</h4>
+                      </a>
+                      <div class="btn btn-warning">&nbsp;&nbsp;删&nbsp;&nbsp;&nbsp;&nbsp;除&nbsp;&nbsp;</div>
+                    </div>
+                  </div>
+                  <nav class="pagi" id="pagi-3">
+                    <ul class="pagination pagination-lg">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--编码内容结束************************************************************-->
+
+<!-- 页尾 -->
+<div class="D-footer">
+  <div class="container-fulid">
+    <div class="row-fulid">
+      <p class="h3" style="text-align: center;margin-top: 40px;">@福建师范大学开发团队</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- 引入自己写的响应式页面插件 -->
+    <script src="js/myResponsive.js" type="text/javascript"></script>
+    <!-- 我自己的JavaScript -->
+    <script src="js/myJS/personalCenter.js" type="text/javascript"></script>
+    
+  </body>
+</html>
