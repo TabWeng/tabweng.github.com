@@ -7,7 +7,7 @@ $(function() {
 	scrollNav();
 
 	// 设置文字说明的高度和图片等高 - 初始化
-	explainHeight();
+	getHeightToWord();
 
 	// 监听
     $(window).resize(function() {
@@ -135,17 +135,28 @@ function explainHeight() {
 				getMyPic = getPicEle.eq(j);
 				getMyWord = getWordEle.eq(j);
 				getMyWord.css("height",getMyPic.innerHeight() + "px");
-				// alert("第"+j);
 		}
+		return true;
 
 	}else{
-		alert("加载错误，请刷新页面");
+		return false;
 	}
 
 }
 
+// 定时器
+function getHeightToWord(){
 
+	var n=0;
+	var timer = setInterval(function(){
 
+		if(explainHeight() == true){
+			clearInterval(timer);
+		}
+
+	},100);
+
+}
 
 
 /*调试代码
