@@ -104,6 +104,7 @@ function explainHeight() {
 	var getPicEle =  $(".D-myImg");
 	var getWordEle = $(".D-explain");
 	// 遍历所有的节点
+	var n=0;
 	for(var i=0; i<getPicEle.length; i++){
 
 		(
@@ -112,17 +113,18 @@ function explainHeight() {
 				getPic = getPicEle.eq(i);
 				getWord = getWordEle.eq(i);
 
-				getPic.bind('load',function(){
-					getWord.css("height",$(this).innerHeight() + "px");
+				getPic.one('load',function(){
+					
 				}).each(function(){
 					if(this.complete){
+						getWord.css("height",$(this).innerHeight() + "px");
 						$(this).load();
 					}
 				})
 			}
 		)(i)
-
 	}
+	// alert(n);
 }
 
 
