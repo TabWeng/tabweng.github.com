@@ -116,18 +116,18 @@ function explainHeight() {
 					getWord.css("height",$(this).innerHeight() + "px");
 				}).each(function(){
 					if(this.complete){
+						alert("ok");
 						$(this).load();
 					}
 				})
-				
-				getWord.css("height",getPic.innerHeight() + "px");
-
-
 			}
 		)(i)
 
 	}
 }
+
+
+
 
 
 /*调试代码
@@ -148,20 +148,21 @@ function explainHeight() {
 	// });
 */
 /*
-
-function imgLoad(img,callback){
-	alert("jaiz");
-	// alert(img.attr("src"));
-	var timer = setInterval(function(){
-		alert(img.attr("src"));
-		if(img.complete){
-			callback(img);
-			clearInterval(timer);
-			alert("加载完成");
-		}
-	},50)
-}
 */
+
+// function imgLoad(img,callback){
+// 	alert("jaiz");
+// 	// alert(img.attr("src"));
+// 	var timer = setInterval(function(){
+// 		alert(img.attr("src"));
+// 		if(img.complete){
+// 			callback(img);
+// 			clearInterval(timer);
+// 			alert("加载完成");
+// 		}
+// 	},50)
+// }
+
 
 /****************
 *函数名：ctrlModalPicSize
