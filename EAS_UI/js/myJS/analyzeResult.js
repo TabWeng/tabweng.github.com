@@ -114,17 +114,29 @@ function explainHeight() {
 				getWord = getWordEle.eq(i);
 
 				getPic.one('load',function(){
-					
+					// getWord.css("height",$(this).innerHeight() + "px");
 				}).each(function(){
 					if(this.complete){
-						getWord.css("height",$(this).innerHeight() + "px");
+						n++;
 						$(this).load();
 					}
 				})
+				
 			}
 		)(i)
 	}
-	// alert(n);
+
+	if(n == getPicEle.length){
+		for(var j = 0; j<getPicEle.length; j++){
+				getMyPic = getPicEle.eq(j);
+				getMyWord = getWordEle.eq(j);
+				getMyWord.css("height",$(getMyPic).innerHeight() + "px");
+		}
+
+	}else{
+		alert("加载错误，请刷新页面");
+	}
+
 }
 
 
