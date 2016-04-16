@@ -126,11 +126,15 @@ function explainHeight() {
 		)(i)
 	}
 
-	if(n == getPicEle.length){
+	alert(n);
+	alert("pic="+n);
+
+	if(n == parseInt(getPicEle.length)){
 		for(var j = 0; j<getPicEle.length; j++){
 				getMyPic = getPicEle.eq(j);
 				getMyWord = getWordEle.eq(j);
-				getMyWord.css("height",$(getMyPic).innerHeight() + "px");
+				getMyWord.css("height",getMyPic.innerHeight() + "px");
+				alert("第"+j);
 		}
 
 	}else{
