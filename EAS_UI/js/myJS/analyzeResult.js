@@ -112,11 +112,10 @@ function explainHeight() {
 				getPic = getPicEle.eq(i);
 				getWord = getWordEle.eq(i);
 
-				getPic.one('load',function(){
+				getPic.bind('load',function(){
 					getWord.css("height",$(this).innerHeight() + "px");
 				}).each(function(){
 					if(this.complete){
-						alert("ok");
 						$(this).load();
 					}
 				})
