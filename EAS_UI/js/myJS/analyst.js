@@ -1,0 +1,33 @@
+$(function(){
+	myResponsive(
+		".orderDetail",
+		280,991,
+		{
+			"width":"100%"
+		},
+		[
+		]
+	);
+});
+$(function(){
+	myResponsive(
+		".fade",
+		280,991,
+		{
+			"padding-left":"0px"
+		},
+		[
+		]
+	);
+});
+$(function(){
+	myResponsive(
+		"#comment",
+		280,750,
+		{
+			"padding-top":"0px"
+		},
+		[
+		]
+	);
+});

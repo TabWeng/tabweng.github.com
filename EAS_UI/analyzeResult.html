@@ -12,7 +12,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入按钮样式 -->
     <link rel="stylesheet" type="text/css" href="css/buttons.css">
-
+    <!-- 引入确认插件的css -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-confirm.min.css"> 
     <!-- 引入我们自己的css文件 -->
     <link rel="stylesheet" type="text/css" href="css/myCSS/analyzeResult.css">
     <link rel="stylesheet" type="text/css" href="css/myCSS/index.css">
@@ -103,7 +104,7 @@
 <!-- 两个按钮 -->
 <div class="row" id="myArChooseBtn">
   <div class="col-md-offset-6 col-md-3">
-      <a href="" class="button button-block button-rounded button-action button-large">保存结果</a>
+      <a href="" class="button button-block button-rounded button-action button-large" data-toggle="modal" data-target="#saveResult">保存结果</a>
   </div>
   <div class="col-md-3">
       <a href="analyzeOperation.html " class="button button-block button-rounded button-action button-large">返回分析</a>
@@ -152,14 +153,16 @@
         <div class="col-md-7" id="section-1">
           <!-- 图片后面的data-XX 为支持的模态框效果 -->
           <!-- modealPic1 模态框的图片的id -->
-          <img class="D-myImg" src="images/10.jpg" data-toggle="modal" data-target="#modalPic1">
+          <img class="D-myImg" src="images/7.png" data-toggle="modal" data-target="#modalPic1">
         </div>
         <!-- 文字 -->
         <div class="col-md-5">
           <div class="D-explain">
-            <h3>阿尔法围棋</h3>
+            <h3>学习情况分析</h3>
             <p class="h4 text-justify">
-              阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+
+              简单题答对率为，0.75定义可不变,简单题答对率为，0.75定义可不变,简单题答对率为，0.75定义可不变,简单题答对率为，0.75定义可不变,简单题答对率为，0.75定义可不变,简单题答对率为，0.75定义可不变,简单题答对率为，0.75定义可不变,简单题答对率为，0.75定义可不变,简单题答对率为，0.75定义可不变,简单题答对率为，0.75定义可不变
+
             </p>
           </div>
         </div>
@@ -208,7 +211,7 @@
     <div class="modal-dialog D-modalPicSise" role="document">
         <div data-dismiss="modal">
           <!-- 模态框的图片 -->
-          <img src="images/10.jpg">
+          <img src="images/7.png">
 
         </div>
     </div>
@@ -237,6 +240,45 @@
   </div>
 
 
+  <!-- 模态框显示保存记录 -->
+<div class="modal fade" id="saveResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">保存分析结果</h4>
+      </div>
+      <div class="modal-body">
+      
+
+          <form class="form-horizontal">
+        
+            <div class="form-group">
+              <label for="saveTitle" class="col-sm-2 control-label">保存标题</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="saveTitle" placeholder="请输入10个字以内的保存标题">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="remarkInfo" class="col-sm-2 control-label">备注内容</label>
+              <div class="col-sm-10">
+               <textarea id="remarkInfo" class="form-control" rows="6" placeholder="请输入本次分析的备注"></textarea>
+              </div>
+            </div>            
+
+          </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="saveMyResult">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 </div> <!-- 总行row -->
 </div> <!-- 大容器container  -->
@@ -252,6 +294,10 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- 单页面滑动跟随效果 -->
     <script src="js/jquery.nav.js" type="text/javascript"></script>
+
+    <!-- 引入确认框插件 -->
+    <script src="js/jquery-confirm.min.js" type="text/javascript"></script> 
+
     <!-- 引入自己写的响应式页面插件 -->
     <script src="js/myResponsive.js" type="text/javascript"></script>
     <!-- 我自己的JavaScript放在最下面 -->

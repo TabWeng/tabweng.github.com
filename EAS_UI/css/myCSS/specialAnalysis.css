@@ -92,17 +92,21 @@ padding-left: 15px;
 	padding-left: 15px;
 }
 .yOn{
-	background-color: white;
+/*	background-color: white;*/
  	cursor: pointer;
- 	margin-left: 10px;
- 	color: gray;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 90px;
+/* 	margin-left: 10px;*/
+/* 	color: gray;*/
 
 }
- .yOn:hover{
+/* .yOn:hover{
 background-color: white;
 color: rgb(255,96,0);
 
- }
+ }*/
 #Dinpt{
 	background-color: white;
 }
@@ -154,3 +158,51 @@ color: rgb(255,96,0);
   .D-style11 {
   	margin-top: 20px;
   }
+
+  /******************************************************/
+  /*手形*/
+  .fingleStyle {
+  	cursor: pointer;
+  }
+
+  /*提示申请费用的字体样式*/
+  .signForModify {
+  	color: red;
+  	margin-bottom: 15px;
+  	font-size: 16px;
+  }
+
+/*******************************************************/
+  /*提示框样式*/
+
+  /*确认弹窗的按钮*/
+.D-confirm{
+	background-color:#A7DF3C;
+}
+
+/*确认框的内容*/
+.content {
+	text-align: center;
+	font-size: 16px;
+}
+
+.D-signColor {
+	color:#EE9A49;
+}
+
+.D-signColorRed {
+	color: red;
+}
+
+.D-signColorGreen {
+  color: #A7DF3C;
+}
+
+/*已经评价了的按钮样式*/
+.overJudge{
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 110px;
+  text-align: center;
+
+}

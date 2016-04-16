@@ -1,7 +1,7 @@
 $(document).ready(function() {
    
      
-  $(".CancelPay").click(function(){
+  $(".toPush").click(function(){
     $("#chose").css("display","block");
      
   });
@@ -9,17 +9,17 @@ $(document).ready(function() {
     $("#chose").css("display","none");
   });
   
+
   $(".analystOperation").click(function(){
  
- var hang = $(this).parent("tr").prevAll().length+1; 
- var id=$("#Unfinished tr:eq("+hang+") td:eq(0)").text();
- var title=$("#Unfinished tr:eq("+hang+") td:eq(1)").text();
- var price=$("#Unfinished tr:eq("+hang+") td:eq(3)").text();
-  $("#Dinpt").val(id);
-  $("#Pay_indentID").text(id);
-  $("#Pay_title").text(title);
-  $("#Pay_price").text(price);
-
+   var hang = $(this).parent("tr").prevAll().length+1; 
+   var id=$("#Unfinished tr:eq("+hang+") td:eq(0)").text();
+   var title=$("#Unfinished tr:eq("+hang+") td:eq(1)").text();
+   var price=$("#Unfinished tr:eq("+hang+") td:eq(3)").text();
+    $("#Dinpt").val(id);
+    $("#Pay_indentID").text(id);
+    $("#Pay_title").text(title);
+    $("#Pay_price").text(price);
   });
 
   $("input:radio[name=chose]").click(function(){
@@ -72,27 +72,29 @@ $('#photoCover').val(filename);
       });*/
 
   
-  $.ajax({ 
-      type: "POST",   
-      url: "#",
-      data: {
-        type_Id: $("#type_Id").val(), 
-        type_Demand: $("#type_Demand").val(), 
-        filedata: $("#filedata").val(), 
-        descript: $("#descript").val(),
-        title: $("#title").val(),
-        Analyst_Id: $("#Analyst_Id").val(),
+  // $.ajax({ 
+  //     type: "POST",   
+  //     url: "#",
+  //     data: {
+  //       type_Id: $("#type_Id").val(), 
+  //       type_Demand: $("#type_Demand").val(), 
+  //       filedata: $("#filedata").val(), 
+  //       descript: $("#descript").val(),
+  //       title: $("#title").val(),
+  //       Analyst_Id: $("#Analyst_Id").val(),
       
-      },
-      dataType: "json",
-      success: function(data){
+  //     },
+  //     dataType: "json",
+  //     success: function(data){
          
-      },
-      error: function(jqXHR){     
-         alert("发生错误：" + jqXHR.status);  
-      },     
-    });
+  //     },
+  //     error: function(jqXHR){     
+  //        alert("发生错误：" + jqXHR.status);  
+  //     },     
+  //   });
+
 });
+
   $(".Djudge").click(function(){
 		var hang = $(this).parent("#Finished tr ").prevAll().length+1; 
         var t=$("#Finished tr:eq("+hang+") td:eq(0)").text();
@@ -102,13 +104,11 @@ $('#photoCover').val(filename);
 
 
 	}); 
+
   $(".Dmodify").click(function(){
 		var hang = $(this).parent("#Finished tr ").prevAll().length+1; 
         var t=$("#Finished tr:eq("+hang+") td:eq(0)").text();
         $("#Modify_indentID").text(t);
-
-
-
 	});
 
 	$(".judge").click(function(){
@@ -126,44 +126,72 @@ $('#photoCover').val(filename);
 
 
 	});
+
 	$("#modifyBtn").click(function(){
 
 		var getreDescriptLength = $('#reDescript')[0].value.length;
 		 
 			if( getreDescriptLength == 0){
-				alert("请输入需求概述！");
+        $.alert({
+            icon: 'glyphicon glyphicon-exclamation-sign D-signColorRed',
+              title: '提示：',
+              confirmButton: '确定',
+              content: '请输入需求概述',
+              confirm: function(){
+              }
+          });
 				
 			}else if(getreDescriptLength < "10"){
-				alert("至少输入10个字的需求概述！");
-				
-			}else{
-				$("#modifyForm").submit();
-
+        $.alert({
+            icon: 'glyphicon glyphicon-exclamation-sign D-signColorRed',
+              title: '提示：',
+              confirmButton: '确定',
+              content: '至少输入10个字',
+              confirm: function(){
+              }
+          });
 				
 			}
 			
 		
 	});
+
+
   // 限制输入字符长度
 	$('#payKey').bind('input propertychange', function(){
 		if(this.value.length >= "6"){
 			this.value = this.value.substr(0,6);
 		}
 	});
-	// 提交付款表单
-	$("#payBtn").click(function(){
-		var getpayKeyLength = $('#payKey')[0].value.length;
-			if( getpayKeyLength == 0){
-				alert("请输入支付订单尾号的6位数，如果不知道如何操作，请查看“帮助”");
-				
-			}else if(getpayKeyLength != "6"){
-				alert("输入长度有误，请输入订单尾号的6位数");
-				
-			}else{
-				$("#payForm").submit();
 
+  
+	// 提交付款表单
+	// $("#payBtn").click(function(){
+	// 	var getpayKeyLength = $('#payKey')[0].value.length;
+	// 		if( getpayKeyLength == 0){
+ //        $.alert({
+ //            icon: 'glyphicon glyphicon-exclamation-sign D-signColorRed',
+ //              title: '提示：',
+ //              confirmButton: '确定',
+ //              content: '请输入支付订单尾号的6位数，如果不知道如何操作，请查看“帮助”',
+ //              confirm: function(){
+ //              }
+ //          });
 				
-			}
+	// 		}else if(getpayKeyLength != "6"){
+ //        $.alert({
+ //            icon: 'glyphicon glyphicon-exclamation-sign D-signColorRed',
+ //              title: '提示：',
+ //              confirmButton: '确定',
+ //              content: '输入长度有误，请输入订单尾号的6位数',
+ //              confirm: function(){
+ //              }
+ //          });
+	// 			}
+			// }else{
+			// 	$("#payForm").submit();
+				
+			// }
 			
 		
 	});
@@ -180,4 +208,19 @@ $("#input-21f").rating({'size':'lg'});  //带参数初始化
 //   alert($("#input-21f")[0].value);
 // });
 
+
+  //上传材料
+$('input[id=lefile]').change(function() {
+  var path=$(this).val();
+  var pos1 = path.lastIndexOf('/');
+  var pos2 = path.lastIndexOf('\\');
+  var pos = Math.max(pos1, pos2);
+  var filename;
+  if( pos<0 ){filename= path;}
+  else{filename= path.substring(pos+1);}
+$('#photoCover').val(filename);
+
 });
+
+
+// });

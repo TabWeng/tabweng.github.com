@@ -1,3 +1,146 @@
 {
-	"cancelOrderSituation": true
+	"cancelOrderSituation": true,
+	"comfirmToPushOrder": false,
+
+	"cancelPay": true,
+
+	"commitStar":false,
+	"commitModify":true,
+
+	"twoCodePay":true,
+
+	"analySisIdExamine":true,
+
+	"unfinishedOrders":{
+		"list":[
+			{
+				"id": 1000002,
+				"ast": {
+                    "analyzeSchemes": ["学生分析学生分析你好哈哈哈哈哈"],
+                    "type": "学生"
+                },
+				"specialAnalyzeSchemeState":{
+					"state":"未分配"
+				},
+				"price": null,
+				"analyzeScheme": null,
+				"userByAnalystId":{
+					"realName":"aaa",
+					"phone":"18459189389"
+				}		
+			},
+			{
+				"id": 1000003,
+				"ast": {
+                    "analyzeSchemes": ["学生分析"],
+                    "type": "学生"
+                },
+				"specialAnalyzeSchemeState":{
+					"state":"等待处理"
+				},
+				"price": 600,
+				"analyzeScheme": null,
+				"userByAnalystId":null
+			},
+			{
+				"id": 1000004,
+				"ast": {
+                    "analyzeSchemes": ["学生分析"],
+                    "type": "学生"
+                },
+				"specialAnalyzeSchemeState":{
+					"state":"等待处理"
+				},
+				"price": 600,
+				"analyzeScheme": null,
+				"userByAnalystId":{
+					"realName":"aaa",
+					"phone":"18459189389"
+				}		
+			},
+			{
+				"id": 1000005,
+				"ast": {
+                    "analyzeSchemes": ["学生分析"],
+                    "type": "学生"
+                },
+				"specialAnalyzeSchemeState":{
+					"state":"等待处理"
+				},
+				"price": 600,
+				"analyzeScheme": null,
+				"userByAnalystId":{
+					"realName":"aaa",
+					"phone":"18459189389"
+				}			
+			}			
+		],
+		"totalPage":3
+	},
+
+    "finishedOrders": {
+        "list": [
+            {
+				"id": 1000002,
+				"ast": {
+                    "analyzeSchemes": ["学生分析"],
+                    "type": "学生"
+                },
+				"specialAnalyzeSchemeState":{
+					"state":"正常使用"
+				},
+				"price": 600,
+				"analyzeScheme":{
+					"id":123
+				},
+				"userByAnalystId":{
+					"realName":"aaa",
+					"phone":"18459189389"
+				},
+				"analyzeResultName": "aaa",
+				"star": null
+            },
+            {
+				"id": 1000002,
+				"ast": {
+                    "analyzeSchemes": ["学生分析"],
+                    "type": "学生"
+                },
+				"specialAnalyzeSchemeState":{
+					"state":"正常使用"
+				},
+				"price": 600,
+				"analyzeScheme": null,
+				"userByAnalystId":{
+					"realName":"aaa",
+					"phone":"18459189389"
+				},
+				"analyzeResultName": "aaa",
+				"star": 3.45			                         	
+            },
+            {
+				"id": 1000003,
+				"ast": {
+                    "analyzeSchemes": ["学生分析"],
+                    "type": "学生"
+                },
+				"specialAnalyzeSchemeState":{
+					"state":"正常使用"
+				},
+				"price": 600,
+				"analyzeScheme": null,
+				"userByAnalystId":{
+					"realName":"aaa",
+					"phone":"18459189389"
+				},
+				"analyzeResultName": "aaa",
+				"star": 3.00			                         	
+            }
+        ],
+        "totalPage":2
+    
+    }
+
+
+
 }

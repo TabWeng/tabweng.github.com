@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>教育大数据学习分析系统</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入按钮样式 -->
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <!-- 引入我们自己的css文件 -->
+    <link rel="stylesheet" type="text/css" href="css/myCSS/index.css">
+    <link rel="stylesheet" type="text/css" href="css/myCSS/analyst.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    
+<!-- #！bootstrap组件-导航条 -->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbarId">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- 响应式导航按钮 -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" id="theBrand"><span>EDAS</span>.COM</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
+      <!-- 小三角标签 -->
+<!--       <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" ></span>   -->       
+      <ul class="nav navbar-nav navbar-right"> 
+        <li><a href="#" id="mediumWord">基于学立方数据学习分析系统</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="serviceHall.html">服务大厅</a></li>
+        <li><a href="news.html">消息<span class="badge" id="newsTip">!</span></a></li>
+        <!-- <li><a href="register.html">注册 | 登录</a></li> -->
+        
+  <!--*登录后的显示*******************************************-->
+        <!-- 显示用户头像等 -->
+        <li>
+          <a href="#">
+            <!-- 头像 -->
+            <img id="myHeadPic" src="images/14.jpg">
+          </a>
+        </li>
+        <!-- 小三角标签 --> 
+        <li class="dropdown">
+          <span class="glyphicon glyphicon-triangle-bottom" id="triStyle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></span>
+          <ul class="dropdown-menu" id="myClickPic">
+            <li><a>hlwyfeng</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="personalCenter.html">个人中心</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="vipPay.html"><span id="linkVIP">申请VIP</span></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">退出</a></li>
+          </ul>
+        </li>
+  <!--*结束**************************************************-->
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+  <!-- 载入子系统超链接 -->
+<!--   <div id="smallSysForLink">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+            <a href="" class="D-mediumWord" id="mediumWord"><span>基于学立方</span>数据学习分析系统</a> -->
+            <!-- <a href="#" class="button button-raised button-pill button-inverse">进入使用</a> -->
+<!--             <a href="" class="button button-primary hidden-xs" id="intoSmallSysBtn">进入使用</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</nav>
+
+<!-- 抵消固定导航的高度 -->
+<div id="myOffsetNav">
+</div>
+
+<!--编码内容开始*************************************************************-->
+
+<div class="container">
+ <div class="row">
+   <div class="col-md-7 col-sm-7">
+     <h1 class="no-padding col-md-3 col-sm-4">分析师</h1>
+     <p id="comment" class="no-padding col-md-8 col-sm-8">平均评价：<span>4.0</span>星级</p>
+   </div>
+   <div class="col-md-offset-3 col-md-2 col-sm-offset-1 col-sm-4">
+     <a id="releaseReq" href="#" class="button btn-info button-block button-rounded button-action button-large">关闭订单</a>
+   </div>
+ </div> 
+    <!-- 分隔线 -->
+   <hr class="D-lineStyle">
+
+
+  <div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs D-tabTitleStyle" role="tablist">
+      <li role="presentation" class="active" id="requireOrderTab"><a href="#requireOrder" aria-controls="requireOrder" role="tab" data-toggle="tab">请求订单</a></li>
+
+      <li role="presentation" class="" id="reqChangeOrderTab"><a href="#reqChangeOrder" aria-controls="reqChangeOrder" role="tab" data-toggle="tab">请求修改的订单</a></li>
+
+      <li role="presentation" class="" id="putCusModelTab"><a href="#putCusModel" aria-controls="putCusModelTab" role="tab" data-toggle="tab">提交定制模板</a></li>
+
+      <li role="presentation" class="" id="putAnaReportTab"><a href="#putAnaReport" aria-controls="putAnaReport" role="tab" data-toggle="tab">提交分析报告</a></li>
+
+      <li role="presentation" class="" id="makePubModelTab"><a href="#makePubModel" aria-controls="makePubModel" role="tab" data-toggle="tab">制作共用模板</a></li>
+
+      <li role="presentation" class="" id="finishedOrderTab"><a href="#finishedOrder" aria-controls="finishedOrder" role="tab" data-toggle="tab">已完成的订单</a></li>
+
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <!-- 请求订单-->
+        <div role="tabpanel" class="active tab-pane D-someTableStyle" id="requireOrder">
+        
+                <div class="table-responsive D-myTableStyle"> <!-- 表格开始 -->
+                    <!-- 表格 -->
+                    <table class="table table-hover">
+                    <!-- 表格标题 -->
+                      <thead class="D-thead">
+                        <tr>
+                          <th class="">需求名称</th>
+                          <th class="">用户名</th>
+                          <th class="">需求类型</th>
+                          <th class="">状态</th>
+                          <th class="">分类</th>
+                          <th class="">发布时间</th>
+                          <th class="">说明</th>
+                          <th class="analystOperation">分析师操作</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+
+                          <tr id="requireOrderCol_1">
+                            <td class="requireName">学生分析</td>
+                            <td class="userName">王晓明</td>
+                            <td class="requireType">分析模板</td>
+                            <td class="">6个状态</td>
+                            <td class="class">教育学生类</td>
+                            <td class="releaseTime">2016-3-12</td>
+                            <td class="requireDetail">
+                              <a href="#" class="D-detailBtn button button-highlight button-rounded" data-toggle="modal" data-target="#reqDetail_1">详情</a>
+                            </td>
+                            <td class="analystOperation">
+                              <a href="#" class="D-havePadBtn button button-action button-rounded analystOperation" data-toggle="modal" data-target="#orderDetail_1">查看</a>
+                            </td>
+
+                          </tr>
+
+
+                      </tbody>
+
+                    </table>
+                </div> <!-- 表格结束 -->
+
+                  <!-- 翻页 -->
+                  <nav class="D-myNavPage col-md-12 col-sm-12 col-xs-12">
+                    <ul class="pager">
+                      <li><a href="#">上一页</a></li>
+                      <li><a href="#">下一页</a></li>
+                    </ul>
+                  </nav> 
+        </div> <!-- 请求订单项卡结束 -->
+
+        <!-- 请求修改订单-->
+        <div role="tabpanel" class="tab-pane D-someTableStyle" id="reqChangeOrder">
+        
+                <div class="table-responsive D-myTableStyle"> <!-- 表格开始 -->
+                    <!-- 表格 -->
+                    <table class="table table-hover">
+                    <!-- 表格标题 -->
+                      <thead class="D-thead">
+                        <tr>
+                          <th class="">需求名称</th>
+                          <th class="">用户名</th>
+                          <th class="">类型</th>
+                          <th class="">状态</th>
+                          <th class="">联系方式</th>
+                          <th class="">价格</th>
+                          <th class="">时间</th>
+                          <th class="">评价</th>
+                          <th class="analystOperation">分析师操作</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+
+                          <tr id="reqChangeOrderCol_1">
+                            <td class="requireName">学生分析</td>
+                            <td class="userName">王晓明</td>
+                            <td class="requireType">教育学生</td>
+                            <td class="">6个状态</td>
+                            <td class="">18650772601</td>
+                            <td class="">100</td>
+                            <td class="">2016-4-10</td>
+                            <td class="">4.0</td>
+                            <td class="analystOperation">
+                              <a href="#" class="D-havePadBtn button button-action button-rounded analystOperation" data-toggle="modal" data-target="#orderDetail_1">查看</a>
+                            </td>
+
+                          </tr>
+
+
+                      </tbody>
+
+                    </table>
+                </div> <!-- 表格结束 -->
+
+                  <!-- 翻页 -->
+                  <nav class="D-myNavPage col-md-12 col-sm-12 col-xs-12">
+                    <ul class="pager">
+                      <li><a href="#">上一页</a></li>
+                      <li><a href="#">下一页</a></li>
+                    </ul>
+                  </nav> 
+        </div> <!-- 请求修改订单项卡结束 -->
+
+        <!-- 提交定制模板-->
+        <div role="tabpanel" class="tab-pane D-someTableStyle" id="putCusModel">
+        
+                <div class="table-responsive D-myTableStyle"> <!-- 表格开始 -->
+                    <!-- 表格 -->
+                    <table class="table table-hover">
+                    <!-- 表格标题 -->
+                      <thead class="D-thead">
+                        <tr>
+                          <th class="">ID</th>
+                          <th class="">需求名称</th>
+                          <th class="">类型</th>
+                          <th class="">用户名</th>
+                          <th class="">联系方式</th>
+                          <th class="">价格</th>
+                          <th class="">时间</th>
+                          <th class="analystOperation">分析师操作</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+
+                          <tr id="putCusModelCol_1">
+                            <td class="">123456</td>
+                            <td class="">学生分析</td>
+                            <td class="">教育学生类</td>
+                            <td class="">王先生</td>
+                            <td class="">18140767743</td>
+                            <td class="">450</td>
+                            <td class="">2016-4-10</td>
+                            <td class="analystOperation">
+                              <a href="#" class="D-havePadBtn button button-action button-rounded analystOperation">选择</a>
+                            </td>
+
+                          </tr>
+
+
+                      </tbody>
+
+                    </table>
+                </div> <!-- 表格结束 -->
+
+                  <!-- 翻页 -->
+                  <nav class="D-myNavPage col-md-12 col-sm-12 col-xs-12">
+                    <ul class="pager">
+                      <li><a href="#">上一页</a></li>
+                      <li><a href="#">下一页</a></li>
+                    </ul>
+                  </nav>
+                  <div id="putCusModelPart" class="col-md-12 col-sm-12 col-xs-12">
+                    <form action="" method="post">
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <p style="font-size: 18px;">ID：&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 18px;">123456</span></p>
+                        <p style="font-size: 18px;">名称：
+                          <input type="text" class="form-control" id="putCusModelName" placeholder="输入名称">
+                        </p>
+                        <div class="no-padding col-md-6 col-sm-6 col-xs-12">
+                          <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            <p class="D-canChooseWord">需求类型：</p>
+                          </div>
+                          <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            <select class="form-control">
+                              <option value="1">教育学生类</option>
+                              <option value="2">教育教师类</option>
+                              <option value="3">教育研究类</option>
+                              <option value="4">教育领导类</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                          <div class="no-padding col-md-4 col-sm-4 col-xs-6 D-ctrlChoose">
+                            <p class="D-canChooseWord">R脚本：</p>
+                          </div>
+                          <div class="col-md-8 col-sm-8 col-xs-6 D-ctrlChoose">
+                            <!-- 上传文件外层div -->
+                            <div class="D-myDivInputFile">
+                              <!-- 上传文件 -->
+                              上传文件
+                              <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                              <input type="file" id="myInputFile" class="D-myInputFile">
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                          <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            <p class="D-canChooseWord">数据样式：</p>
+                          </div>
+                          <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            <!-- 上传文件外层div -->
+                            <div class="D-myDivInputFile">
+                              <!-- 上传文件 -->
+                              上传文件
+                              <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                              <input type="file" id="myInputFile" class="D-myInputFile">
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                          <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            <p class="D-canChooseWord">测试数据：</p>
+                          </div>
+                          <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            <!-- 上传文件外层div -->
+                            <div class="D-myDivInputFile">
+                              <!-- 上传文件 -->
+                              上传文件
+                              <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                              <input type="file" id="myInputFile" class="D-myInputFile">
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                          <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            <p class="D-canChooseWord">作为封面：</p>
+                          </div>
+                          <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            <!-- 上传文件外层div -->
+                            <div class="D-myDivInputFile">
+                              <!-- 上传文件 -->
+                              上传文件
+                              <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                              <input type="file" id="myInputFile" class="D-myInputFile">
+                            </div>
+                          </div>
+                        </div>
+<!--                         <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                          <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            <p class="D-canChooseWord">常模数据：</p>
+                          </div>
+                          <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                            
+                            <div class="D-myDivInputFile">
+                              上传文件
+                              <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                              <input type="file" id="myInputFile" class="D-myInputFile">
+                            </div>
+                          </div>
+                        </div> -->
+                      </div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <textarea class="form-control" rows="5" placeholder="简介"></textarea>
+                      </div>
+                      <div class="col-md-6 col-sm-12 col-xs-12" id="btnGroup_2">
+                        <div class="col-md-5 col-sm-5"></div>
+                        <a href="" class="btn btn-primary col-md-3 col-sm-3 col-xs-12">测试</a>
+                        <div class="col-md-1 col-sm-1"></div>
+                        <button type="submit" class="btn btn-success col-md-3 col-sm-3 col-xs-12" disabled="disabled">提交</button>
+                        <div style="clear: both;"></div>
+                      </div>
+                    </form>
+                  </div> 
+        </div> 
+        <!-- 提交定制模板单项卡结束 -->
+
+        <!-- 提交分析报告-->
+        <div role="tabpanel" class="tab-pane D-someTableStyle" id="putAnaReport">
+        
+                <div class="table-responsive D-myTableStyle"> <!-- 表格开始 -->
+                    <!-- 表格 -->
+                    <table class="table table-hover">
+                    <!-- 表格标题 -->
+                      <thead class="D-thead">
+                        <tr>
+                          <th class="">ID</th>
+                          <th class="">需求名称</th>
+                          <th class="">类型</th>
+                          <th class="">用户名</th>
+                          <th class="">联系方式</th>
+                          <th class="">价格</th>
+                          <th class="">时间</th>
+                          <th class="analystOperation">分析师操作</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+
+                          <tr id="putAnaReportCol_1">
+                            <td class="">123456</td>
+                            <td class="">学生分析</td>
+                            <td class="">教育学生类</td>
+                            <td class="">王先生</td>
+                            <td class="">18140767743</td>
+                            <td class="">450</td>
+                            <td class="">2016-4-10</td>
+                            <td class="analystOperation">
+                              <a href="#" class="D-havePadBtn button button-action button-rounded analystOperation">提交报告</a>
+                            </td>
+
+                          </tr>
+
+
+                      </tbody>
+
+                    </table>
+                </div> <!-- 表格结束 -->
+
+                  <!-- 翻页 -->
+                  <nav class="D-myNavPage col-md-12 col-sm-12 col-xs-12">
+                    <ul class="pager">
+                      <li><a href="#">上一页</a></li>
+                      <li><a href="#">下一页</a></li>
+                    </ul>
+                  </nav>
+                  <div id="putCusModelPart" class="col-md-12 col-sm-12 col-xs-12">
+                    <form action="" method="post">
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <p style="font-size: 18px;">ID：&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 18px;">123456</span></p>
+                        <div class=" no-padding col-md-12 col-sm-12 col-xs-12">
+                          <div class="no-padding col-md-2 col-sm-4 col-xs-6 D-ctrlChoose">
+                            <p class="D-canChooseWord">分析报告：</p>
+                          </div>
+                          <div class="no-padding col-md-2 col-sm-4 col-xs-6 D-ctrlChoose">
+                            <!-- 上传文件外层div -->
+                            <div class="D-myDivInputFile">
+                              <!-- 上传文件 -->
+                              上传文件
+                              <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                              <input type="file" id="myInputFile" class="D-myInputFile">
+                            </div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-success col-md-4 col-sm-8 col-xs-12">上传</button>
+                      </div>
+                    </form>
+                  </div> 
+        </div> 
+        <!-- 提交分析报告单项卡结束 -->
+
+        <!-- 制作公用模板-->
+        <div role="tabpanel" class="tab-pane D-someTableStyle" id="makePubModel">
+          <div id="putCusModelPart" class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">
+            <form action="" method="post">
+              <div class="col-md-6 col-sm-12 col-xs-12">
+                <p style="font-size: 18px;">名称：
+                  <input type="text" class="form-control" id="putCusModelName" placeholder="输入名称">
+                </p>
+                <div class="no-padding col-md-6 col-sm-6 col-xs-12">
+                  <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <p class="D-canChooseWord">需求类型：</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <select class="form-control">
+                      <option value="1">教育学生类</option>
+                      <option value="2">教育教师类</option>
+                      <option value="3">教育研究类</option>
+                      <option value="4">教育领导类</option>
+                    </select>
+                  </div>
+                </div>
+                <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                  <div class="no-padding col-md-4 col-sm-4 col-xs-6 D-ctrlChoose">
+                    <p class="D-canChooseWord">R脚本：</p>
+                  </div>
+                  <div class="col-md-8 col-sm-8 col-xs-6 D-ctrlChoose">
+                    <!-- 上传文件外层div -->
+                    <div class="D-myDivInputFile">
+                      <!-- 上传文件 -->
+                      上传文件
+                      <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                      <input type="file" id="myInputFile" class="D-myInputFile">
+                    </div>
+                  </div>
+                </div>
+                <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                  <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <p class="D-canChooseWord">数据样式：</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <!-- 上传文件外层div -->
+                    <div class="D-myDivInputFile">
+                      <!-- 上传文件 -->
+                      上传文件
+                      <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                      <input type="file" id="myInputFile" class="D-myInputFile">
+                    </div>
+                  </div>
+                </div>
+                <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                  <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <p class="D-canChooseWord">测试数据：</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <!-- 上传文件外层div -->
+                    <div class="D-myDivInputFile">
+                      <!-- 上传文件 -->
+                      上传文件
+                      <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                      <input type="file" id="myInputFile" class="D-myInputFile">
+                    </div>
+                  </div>
+                </div>
+                <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                  <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <p class="D-canChooseWord">作为封面：</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <!-- 上传文件外层div -->
+                    <div class="D-myDivInputFile">
+                      <!-- 上传文件 -->
+                      上传文件
+                      <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                      <input type="file" id="myInputFile" class="D-myInputFile">
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class=" no-padding col-md-6 col-sm-6 col-xs-12">
+                  <div class="no-padding col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <p class="D-canChooseWord">常模数据：</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 D-ctrlChoose">
+                    <div class="D-myDivInputFile">
+                      上传文件
+                      <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true" style="color:#78a355;"></span>
+                      <input type="file" id="myInputFile" class="D-myInputFile">
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col-md-6 col-sm-12 col-xs-12">
+                <textarea class="form-control" rows="5" placeholder="简介"></textarea>
+              </div>
+              <div class="col-md-6 col-sm-12 col-xs-12" id="btnGroup_2">
+                <div class="col-md-5 col-sm-5"></div>
+                <a href="" class="btn btn-primary col-md-3 col-sm-3 col-xs-12">测试</a>
+                <div class="col-md-1 col-sm-1"></div>
+                <button type="submit" class="btn btn-success col-md-3 col-sm-3 col-xs-12" disabled="disabled">提交</button>
+                <div style="clear: both;"></div>
+              </div>
+            </form>
+          </div> 
+        </div> 
+        <!-- 制作公用模板单项卡结束 -->
+
+        <!-- 已完成的订单-->
+        <div role="tabpanel" class=" tab-pane D-someTableStyle" id="finishedOrder">
+        
+                <div class="table-responsive D-myTableStyle"> <!-- 表格开始 -->
+                    <!-- 表格 -->
+                    <table class="table table-hover">
+                    <!-- 表格标题 -->
+                      <thead class="D-thead">
+                        <tr>
+                          <th class="">需求名称</th>
+                          <th class="">类型</th>
+                          <th class="">用户名</th>
+                          <th class="">联系方式</th>
+                          <th class="">价格</th>
+                          <th class="">时间</th>
+                          <th class="">评价</th>
+                          <th class="">收入</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+
+                          <tr id="finishedOrderCol_1">
+                            <td class="">学生分析</td>
+                            <td class="">教育学生类</td>
+                            <td class="">王先生</td>
+                            <td class="">18290665389</td>
+                            <td class="">450</td>
+                            <td class="">2016-3-12</td>
+                            <td class="">4.0</td>
+                            <td class="">等待处理</td>
+
+                          </tr>
+
+
+                      </tbody>
+
+                    </table>
+                </div> <!-- 表格结束 -->
+
+                  <!-- 翻页 -->
+                  <nav class="D-myNavPage col-md-12 col-sm-12 col-xs-12">
+                    <ul class="pager">
+                      <li><a href="#">上一页</a></li>
+                      <li><a href="#">下一页</a></li>
+                    </ul>
+                  </nav> 
+        </div> <!-- 已完成的订单项卡结束 -->
+
+        <!-- 模态框 -->
+
+        <!-- 需求简要说明模块 -->
+        <div class="modal fade" id="reqDetail_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">需求简要说明</h4>
+              </div>
+              <div class="modal-body">  
+                <div class="D-apply">
+                  <p class="h4">
+                    对学生成绩进行总体分析，数据量不多。
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+              </div>
+            </div>
+          </div>
+        </div>          
+
+        <!--需求列表结束****************************************-->
+        <!-- 需求具体说明模态框 -->
+        <div class="modal fade" id="orderDetail_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="col-md-2"></div>
+          <div class="modal-dialog orderDetail col-md-8 col-sm-12" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">订单说明</h4>
+              </div>
+              <div class="modal-body">
+                <form action="" method="post">
+                  <div class="col-md-6" id="userMesse">
+                    <p id="userNme">张先生</p>
+                    <p id="userTel">联系方式：<span>110110110110</span></p>
+                    <p id="orderType">类型：<span>教育学生类</span></p>
+                  </div>
+                  <div class="no-padding col-md-6">
+                    <div id="btnGroup" class="col-md-12">
+                      <a href="" class="btn btn-info">下载材料</a>
+                      <div class="btn btn-warning">&nbsp;弃单&nbsp;</div>
+                    </div>
+                    <div class="col-md-12 D-myVip" id="howMuch">
+                      <p>价格：
+                        <input type="text" class="form-control" id="inputVipMonth" placeholder="输入价格"  onkeyup="this.value=this.value.replace(/[^\d]/g,'')"
+                        onafterpaste="this.value=this.value.replace(/[^\d]/g,'') ">
+                          元            
+                      </p>
+                      <p>扣除10%平台费将收入&nbsp;<span>??</span>&nbsp;元</p>
+                      <button id="put" type="submit" class="btn btn-success col-md-4 col-sm-4 col-xs-6">
+                        上传
+                      </button>
+                      <div class="col-md-8 col-sm-8 col-xs-6" id="orderState">
+                        <span style="display: block;" id="hadPay">已付款</span>
+                        <span style="display: none;" id="notyetPay">未付款</span>
+                        <span style="display: none;" id="orderCancled">已放弃</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="clear: both;"></div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">保存</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div> 
+
+        <!--分析师列表-->
+    </div>
+  </div>
+</div>
+
+
+<!--编码内容结束************************************************************-->
+
+<!-- 页尾 -->
+<div class="D-footer">
+  <div class="container">
+    <div class="row">
+      <p class="h3" style="text-align: center;margin-top: 40px;">@福建师范大学开发团队</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- 引入自己写的响应式页面插件 -->
+    <script src="js/myResponsive.js" type="text/javascript"></script>
+    <!-- 我自己的JavaScript -->
+    <script src="js/myJS/analyst.js" type="text/javascript"></script>
+    
+  </body>
+</html>

@@ -12,7 +12,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入按钮样式 -->
     <link rel="stylesheet" type="text/css" href="css/buttons.css">
-
+    <!-- 引入确认插件的css -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-confirm.min.css">
     <!-- 引入我们自己的css文件 -->
     <link rel="stylesheet" type="text/css" href="css/myCSS/dataTrack.css">
     <link rel="stylesheet" type="text/css" href="css/myCSS/index.css">
@@ -122,7 +123,7 @@
 			</div>
 
 			<div id="myOperationBtn" class="col-md-offset-9">
-				<button type="button" class="btn btn-default"> 确定分析 </button>
+				<button type="button" class="btn btn-default" id="confirmAnaly"> 确定分析 </button>
 				<button type="button" class="btn btn-default"> 导出PDF  </button>
 			</div>
 
@@ -135,7 +136,7 @@
 </div><!-- container -->
 
 <!-- 备注 -->
-<div class="container">
+<div class="container" id="remarkContainer">
 	<div class="row" id="myArChooseBtn">
 		<div class="col-md-offset-2 col-md-10">
 			<div id="myRemark">
@@ -144,13 +145,22 @@
 				</div>
 				<div id="remarkContent">
 					<!-- 备注的内容 -->
-					<p>
+					<p id="remark-2">
 						负责金融保险行业相关软件的设计、研发工作。
 						1、根据系统需求文档负责自己模块的详细设计； 
 						2、负责模块的代码开发； 
 						3、负责已开发模块的维护； 
 						4、相关技术文档的编写；,
 					</p>
+
+          <p id="remark-3">
+            aaaaaaaaaaa
+            1、根据系统需求文档负责自己模块的详细设计； 
+            2、负责模块的代码开发； 
+            3、负责已开发模块的维护； 
+            4、相关技术文档的编写；,
+          </p>
+
 				</div>
 			</div>
 		</div>
@@ -181,43 +191,39 @@
         <div class="collapse navbar-collapse" id="myNav">
           <ul class="nav nav-stacked D-myContents">
             <li>
-            	<p class="D-firstContent">总图</p>
-				<div class="D-mySecondLi">
-					<ul>
-						<li><a href="#section-1">分析分析分析分析分析</a></li>
-						<li><a href="#section-2">分析分析分析分析分析</a></li>
-						<li><a href="#section-3">分析分析分析分析分析</a></li>
-						<li><a href="#section-4">分析分析分析分析分析</a></li>
-						<li><a href="#section-5">分析分析分析分析分析</a></li>
-						<li><a href="#section-6">分析分析分析分析分析</a></li>
-					</ul>
-				</div>
+            	<p class="D-firstContent" id="myFirstContent-1">总图</p>
+        				<div class="D-mySecondLi">
+        					<ul>
+        						<li><a href="#section-1">分析分析分析分析分析</a></li>
+        						<li><a href="#section-2">分析分析分析分析分析</a></li>
+        						<li><a href="#section-3">分析分析分析分析分析</a></li>
+
+        					</ul>
+        				</div>
             </li>
+
             <li>
-            	<p class="D-firstContent">二年级</p>  
-				<div class="D-mySecondLi">
-					<ul>
-						<li><a href="#section-1">分析分析分析分析分析</a></li>
-						<li><a href="#section-2">分析分析分析分析分析</a></li>
-						<li><a href="#section-3">分析分析分析分析分析</a></li>
-						<li><a href="#section-4">分析分析分析分析分析</a></li>
-						<li><a href="#section-5">分析分析分析分析分析</a></li>
-						<li><a href="#section-6">分析分析分析分析分析</a></li>
-					</ul>
-				</div>            	       	
+            	<p class="D-firstContent" id="myFirstContent-2">二年级</p>  
+        				<div class="D-mySecondLi">
+        					<ul>
+        						<li><a href="#section-4">分析分析分析分析分析</a></li>
+        						<li><a href="#section-5">分析分析分析分析分析</a></li>
+        						<li><a href="#section-6">分析分析分析分析分析</a></li>
+
+        					</ul>
+        				</div>            	       	
             </li>
+
             <li>
-            	<p class="D-firstContent">三年级</p> 
-				<div class="D-mySecondLi">
-					<ul>
-						<li><a href="#section-1">分析分析分析分析分析</a></li>
-						<li><a href="#section-2">分析分析分析分析分析</a></li>
-						<li><a href="#section-3">分析分析分析分析分析</a></li>
-						<li><a href="#section-4">分析分析分析分析分析</a></li>
-						<li><a href="#section-5">分析分析分析分析分析</a></li>
-						<li><a href="#section-6">分析分析分析分析分析</a></li>
-					</ul>
-				</div>            	
+            	<p class="D-firstContent" id="myFirstContent-3">三年级</p> 
+        				<div class="D-mySecondLi">
+        					<ul>
+        						<li><a href="#section-7">分析分析分析分析分析</a></li>
+        						<li><a href="#section-8">分析分析分析分析分析</a></li>
+        						<li><a href="#section-9">分析分析分析分析分析</a></li>
+
+        					</ul>
+        				</div>            	
             </li>                                            
             
           </ul>
@@ -231,62 +237,180 @@
 
 
   <!-- 右边内容************************************************** -->
-  <div class="col-md-10 ">
+  <div class="col-md-10" id="myRightContent">
+    <!-- 第一个.. -->
+    <div id="myContent-1">
 
-    <!-- 每一行 -->
-    <div class="row D-rowStyle">
-        <!-- 图片 -->
-        <div class="col-md-7" id="section-1">
-          <!-- 图片后面的data-XX 为支持的模态框效果 -->
-          <!-- modealPic1 模态框的图片的id -->
-          <img class="D-myImg" src="images/10.jpg" data-toggle="modal" data-target="#modalPic1">
-        </div>
-        <!-- 文字 -->
-        <div class="col-md-5">
-          <div class="D-explain">
-            <h3>阿尔法围棋</h3>
-            <p class="h4 text-justify">
-              阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
-            </p>
+      <!-- 每一行 -->
+      <div class="row D-rowStyle">
+          <!-- 图片 -->
+          <div class="col-md-7" id="section-1">
+            <!-- 图片后面的data-XX 为支持的模态框效果 -->
+            <!-- modealPic1 模态框的图片的id -->
+            <img class="D-myImg" src="images/10.jpg" data-toggle="modal" data-target="#modalPic1">
           </div>
-        </div>
-    </div>
-
-    <!-- 每一行 -->
-    <div class="row D-rowStyle">
-        <!-- 图片 -->
-        <div class="col-md-7" id="section-2">
-          <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic2">
-        </div>
-        <!-- 文字 -->
-        <div class="col-md-5">
-          <div class="D-explain">
-            <h3>阿尔法围棋</h3>
-            <p class="h4 text-justify">
-              阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
-            </p>
+          <!-- 文字 -->
+          <div class="col-md-5">
+            <div class="D-explain">
+              <h3>阿尔法围棋</h3>
+              <p class="h4 text-justify">
+                阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+              </p>
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
-    <!-- 每一行 -->
-    <div class="row D-rowStyle">
-        <!-- 图片 -->
-        <div class="col-md-7" id="section-3">
-          <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic3">
-        </div>
-        <!-- 文字 -->
-        <div class="col-md-5">
-          <div class="D-explain">
-            <h3>阿尔法围棋</h3>
-            <p class="h4 text-justify">
-              阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
-            </p>
+      <!-- 每一行 -->
+      <div class="row D-rowStyle">
+          <!-- 图片 -->
+          <div class="col-md-7" id="section-2">
+            <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic2">
           </div>
-        </div>
-    </div>
+          <!-- 文字 -->
+          <div class="col-md-5">
+            <div class="D-explain">
+              <h3>阿尔法围棋</h3>
+              <p class="h4 text-justify">
+                阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+              </p>
+            </div>
+          </div>
+      </div>
 
-  </div> <!-- 右边的内容 -->
+      <!-- 每一行 -->
+      <div class="row D-rowStyle">
+          <!-- 图片 -->
+          <div class="col-md-7" id="section-3">
+            <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic3">
+          </div>
+          <!-- 文字 -->
+          <div class="col-md-5">
+            <div class="D-explain">
+              <h3>阿尔法围棋</h3>
+              <p class="h4 text-justify">
+                阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+              </p>
+            </div>
+          </div>
+      </div>
+    </div> <!-- 右边的内容 -->
+
+    <!-- 第二个.. -->
+    <div id="myContent-2">
+
+      <!-- 每一行 -->
+      <div class="row D-rowStyle">
+          <!-- 图片 -->
+          <div class="col-md-7" id="section-4">
+            <!-- 图片后面的data-XX 为支持的模态框效果 -->
+            <!-- modealPic1 模态框的图片的id -->
+            <img class="D-myImg" src="images/10.jpg" data-toggle="modal" data-target="#modalPic1">
+          </div>
+          <!-- 文字 -->
+          <div class="col-md-5">
+            <div class="D-explain">
+              <h3>阿尔法围棋</h3>
+              <p class="h4 text-justify">
+                阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+              </p>
+            </div>
+          </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="row D-rowStyle">
+          <!-- 图片 -->
+          <div class="col-md-7" id="section-5">
+            <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic2">
+          </div>
+          <!-- 文字 -->
+          <div class="col-md-5">
+            <div class="D-explain">
+              <h3>阿尔法围棋</h3>
+              <p class="h4 text-justify">
+                阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+              </p>
+            </div>
+          </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="row D-rowStyle">
+          <!-- 图片 -->
+          <div class="col-md-7" id="section-6">
+            <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic3">
+          </div>
+          <!-- 文字 -->
+          <div class="col-md-5">
+            <div class="D-explain">
+              <h3>阿尔法围棋</h3>
+              <p class="h4 text-justify">
+                阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+              </p>
+            </div>
+          </div>
+      </div>
+    </div> <!-- 右边的内容 -->
+
+    <!-- 第三个.. -->
+    <div id="myContent-3">
+
+      <!-- 每一行 -->
+      <div class="row D-rowStyle">
+          <!-- 图片 -->
+          <div class="col-md-7" id="section-7">
+            <!-- 图片后面的data-XX 为支持的模态框效果 -->
+            <!-- modealPic1 模态框的图片的id -->
+            <img class="D-myImg" src="images/10.jpg" data-toggle="modal" data-target="#modalPic1">
+          </div>
+          <!-- 文字 -->
+          <div class="col-md-5">
+            <div class="D-explain">
+              <h3>阿尔法围棋</h3>
+              <p class="h4 text-justify">
+                阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+              </p>
+            </div>
+          </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="row D-rowStyle">
+          <!-- 图片 -->
+          <div class="col-md-7" id="section-8">
+            <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic2">
+          </div>
+          <!-- 文字 -->
+          <div class="col-md-5">
+            <div class="D-explain">
+              <h3>阿尔法围棋</h3>
+              <p class="h4 text-justify">
+                阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+              </p>
+            </div>
+          </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="row D-rowStyle">
+          <!-- 图片 -->
+          <div class="col-md-7" id="section-9">
+            <img class="D-myImg" src="images/12.jpg" data-toggle="modal" data-target="#modalPic3">
+          </div>
+          <!-- 文字 -->
+          <div class="col-md-5">
+            <div class="D-explain">
+              <h3>阿尔法围棋</h3>
+              <p class="h4 text-justify">
+                阿尔法围棋（AlphaGo）是一款围棋人工智能程序，由位于英国伦敦的谷歌（Google）旗下DeepMind公司的戴维·西尔弗、艾佳·黄和戴密斯·哈萨比斯与他们的团队开发，这个程序利用“价值网络”去计算局面，用“策略网络”去选择下子。2015年10月阿尔法围棋以5:0完胜欧洲围棋冠军、职业二段选手樊麾；2016年3月对战世界围棋冠军、职业九段选手李世石。
+              </p>
+            </div>
+          </div>
+      </div>
+    </div> <!-- 右边的内容 -->
+  </div>
+
+
 
   <!-- 模态框显示放大的图片************************************** -->
   <!-- Modal -->
@@ -343,6 +467,8 @@
     <script src="js/myResponsive.js" type="text/javascript"></script>
     <!-- 引入时间插件 -->
     <script src="js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <!-- 引入确认框插件 -->
+    <script src="js/jquery-confirm.min.js" type="text/javascript"></script>      
     <!-- 我自己的JavaScript放在最下面 -->
     <script src="js/myJS/responAnalyzeResult.js" type="text/javascript"></script>
     <script src="js/myJS/dataTrack.js" type="text/javascript"></script>

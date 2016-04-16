@@ -59,12 +59,13 @@
 .D-modalPicSise {
 	text-align: center;
 	margin-bottom: 20px;
+	width:auto;
 }
 
 /*重写booststap的样式，用来居中*/
-.modal-dialog {
-	width:auto;
-}
+/* .modal-dialog {
+ 	width:auto;
+ }*/
 
 /*******************************************分析操作*/
 #myArChooseBtn {
@@ -77,9 +78,28 @@
 	margin-bottom: 10px;
 }
 
+ /*提示框样式*********************************************/
 
-
-
-/*******************************************左边侧边栏的使用效果*/
-.nav > li > a {
+  /*确认弹窗的按钮*/
+.D-confirm{
+	background-color:#A7DF3C;
 }
+
+/*确认框的内容*/
+.content {
+	text-align: center;
+	font-size: 16px;
+}
+
+.D-signColor {
+	color:#EE9A49;
+}
+
+.D-signColorRed {
+	color: red;
+}
+
+.D-signColorGreen {
+  color: #A7DF3C;
+}
+

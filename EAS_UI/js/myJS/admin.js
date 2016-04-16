@@ -1352,6 +1352,7 @@ function disposeTableToReturnMoney(data){
 			+"</td><td>"+data.returnMoney.list[i].id
 			+myBtn
 			);
+		// 获得表格的总页数
 		returnMoneyTotalPage = data.returnMoney.totalPage;
 	}
 }
