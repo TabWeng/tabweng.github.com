@@ -114,6 +114,7 @@ function explainHeight() {
 				getWord = getWordEle.eq(i);
 
 				getPic.one('load',function(){
+					console("调用="+i);
 					// getWord.css("height",$(this).innerHeight() + "px");
 				}).each(function(){
 					console.log("外层"+i);
