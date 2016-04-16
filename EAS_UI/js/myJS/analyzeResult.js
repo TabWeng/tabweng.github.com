@@ -116,8 +116,9 @@ function explainHeight() {
 				getPic.one('load',function(){
 					// getWord.css("height",$(this).innerHeight() + "px");
 				}).each(function(){
+					alert("外层"+i);
 					if(this.complete){
-						n++;
+						alert("内层"+i);
 						$(this).load();
 					}
 				})
@@ -126,20 +127,20 @@ function explainHeight() {
 		)(i)
 	}
 
-	alert(n);
-	alert("pic="+n);
+	// alert(n);
+	// alert("pic="+n);
 
-	if(n == parseInt(getPicEle.length)){
-		for(var j = 0; j<getPicEle.length; j++){
-				getMyPic = getPicEle.eq(j);
-				getMyWord = getWordEle.eq(j);
-				getMyWord.css("height",getMyPic.innerHeight() + "px");
-				alert("第"+j);
-		}
+	// if(n == parseInt(getPicEle.length)){
+	// 	for(var j = 0; j<getPicEle.length; j++){
+	// 			getMyPic = getPicEle.eq(j);
+	// 			getMyWord = getWordEle.eq(j);
+	// 			getMyWord.css("height",getMyPic.innerHeight() + "px");
+	// 			alert("第"+j);
+	// 	}
 
-	}else{
-		alert("加载错误，请刷新页面");
-	}
+	// }else{
+	// 	alert("加载错误，请刷新页面");
+	// }
 
 }
 
