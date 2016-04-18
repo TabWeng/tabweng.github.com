@@ -3,12 +3,13 @@ $(function() {
 
 // ajax Url 参数设置区***************************
 	// 提交时间区间
-	commitTimeURL = "ASdataTrackHasData";
+	// commitTimeURL = "ASdataTrackHasData";
+	commitTimeURL = "http://localhost:8080/ajaxTest/test";
 
 // **********************************************
 
 	// 设置文字说明的高度和图片等高 - 初始化
-	explainHeight();
+	getHeightToWord();
 	// 控制模态框图片的尺寸自适应窗口大小 - 初始化
 	ctrlModalPicSise();
 	//单页目录滚动插件使用
@@ -35,23 +36,6 @@ $(function() {
 
 
 /**函数实现区****************************************************/
-
-/***************
-*函数名：explainHeight
-*功能：设置文字说明的高度和图片等高
-***************/
-function explainHeight() {
-	// 获取图片和文字所有节点
-	var getPicEle =  $(".D-myImg");
-	var getWordEle = $(".D-explain");
-
-	// 遍历所有的节点
-	for(var i=0; i<getPicEle.length; i++){
-		// 把文字说明与图片等高
-		// getWordEle[i].style["height"] = getPicEle[i].offsetHeight + "px";
-		getWordEle.eq(i).css("height",getPicEle[i].offsetHeight+"px");
-	}
-}
 
 /***********************
 *函数名：
@@ -202,11 +186,13 @@ function submitTime(commitTimeUrl){
 			});			
 		}else{
 			// ajax 提交
-			param = "start="+getBeginTime+"&end="+getEndTime;
+			getHiddenInput = $("#hiddenInput");
+			var getValue = getHiddenInput.attr("name")+"="+getHiddenInput.val();
+			param = "start="+getBeginTime+"&end="+getEndTime+"&"+getValue;
 			
 			$.get(commitTimeUrl,param,function(data){
 				if(data.submitTimeOperation == true){
-					window.location.href="ASdataTrack?start="+getBeginTime+"&end="+getEndTime+"&result=true";
+					window.location.href="ASdataTrack?start="+getBeginTime+"&end="+getEndTime+"&result=true"+"&"+getValue;
 				}else{
 					$.alert({
 						icon: 'glyphicon glyphicon-exclamation-sign D-signColorRed',
@@ -248,6 +234,73 @@ function GetQueryString(name)
      var r = window.location.search.substr(1).match(reg);
      if(r!=null)return  unescape(r[2]); return null;
 }
+
+
+/***************
+*函数名：explainHeight
+*功能：设置文字说明的高度和图片等高
+***************/
+function explainHeight() {
+	// 获取图片和文字所有节点
+	var getPicEle =  $(".D-myImg");
+	var getWordEle = $(".D-explain");
+	// 遍历所有的节点
+	var n=0;
+	for(var i=0; i<getPicEle.length; i++){
+
+		(
+			function(i){
+
+				getPic = getPicEle.eq(i);
+				getWord = getWordEle.eq(i);
+
+				getPic.one('load',function(){
+					// console.log("调用="+i);
+					// getWord.css("height",$(this).innerHeight() + "px");
+				}).each(function(){
+					// console.log("外层"+i);
+					if(this.complete){
+						// console.log("内层"+i);
+						n++;
+						$(this).load();
+					}
+				})
+				
+			}
+		)(i)
+	}
+
+
+	if(n == parseInt(getPicEle.length)){
+		for(var j = 0; j<getPicEle.length; j++){
+				getMyPic = getPicEle.eq(j);
+				getMyWord = getWordEle.eq(j);
+				getMyWord.css("height",getMyPic.innerHeight() + "px");
+		}
+		return true;
+
+	}else{
+		return false;
+	}
+
+}
+
+// 定时器
+function getHeightToWord(){
+
+	var timer = setInterval(function(){
+
+		if(explainHeight() == true){
+			clearInterval(timer);
+		}
+
+	},100);
+
+}
+
+
+
+
 
 
 
