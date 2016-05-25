@@ -13,7 +13,7 @@
   text-decoration: none;
   cursor: pointer;
   color: #fff;
-  padding: 0 8px;
+  padding: 0 6px;
   font-size: 15px;
   height: 60px;
   line-height: 60px;
@@ -23,7 +23,7 @@
 
 #contents a:hover {
   font-size: 16px;
-  padding: 0 6px;
+  padding: 0 4px;
   opacity: 0.8;
   background-color: #ad8b3d;
 }
