@@ -1,0 +1,71 @@
+.second-content {
+	margin-bottom: 20px;
+}
+
+.second-content ul{
+	list-style: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.second-content li{
+	cursor: pointer;
+	text-align: center;
+	background-color: #c7a252;
+	padding: 10px 20px;
+	font-size: 18px;
+	border-bottom: 1px solid #fff;
+
+	-moz-transition: background-color 0.7s;
+	-webkit-transition: background-color 0.7s;
+}
+
+.second-content li:hover {
+	background-color: #5f3c23;
+
+}
+
+.second-content a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.writeStyle-content {
+	font-size: 18px;
+	background-color: #fffef9;
+	padding: 30px 20px 20px;
+	font-family: Microsoft JhengHei;
+	margin-bottom: 20px;
+	box-shadow: 1px 10px 10px #fffef9;
+}
+
+.writeStyle-content-q {
+	font-size: 20px;
+	background-color: #fffef9;
+	padding: 30px 20px 20px;
+	font-family: Microsoft JhengHei;
+	margin-bottom: 20px;
+	border-radius: 10px;	
+	color: #5f3c23;
+	font-weight: 800;
+}
+
+.writeStyle-title {
+	font-size: 30px;
+
+	height: 60px;
+	line-height: 60px;
+	padding-left: 30px;
+	border-radius: 5px;
+
+	margin-bottom: 20px;
+
+	color: #fff;
+
+	background: -webkit-linear-gradient(left, rgba(199,162,82,1) , rgba(199,162,82,0)); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, rgba(199,162,82,1), rgba(199,162,82,0)); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, rgba(199,162,82,1), rgba(199,162,82,0)); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, rgba(199,162,82,1) , rgba(199,162,82,0)); /* 标准的语法（必须放在最后） */
+
+}
