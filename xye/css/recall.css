@@ -1,0 +1,25 @@
+/*导航*/
+#contents {
+  text-align: center;
+  background-color: #8e7437;
+}
+
+#contents a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 15px;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  font-family: Microsoft JhengHei;
+}
+
+#contents a:hover {
+  font-size: 16px;
+  padding: 0 8px;
+  opacity: 0.8;
+  background-color: #ad8b3d;
+}
+
