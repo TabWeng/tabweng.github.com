@@ -1,0 +1,28 @@
+.personEvaluate {
+	background-color: #fffef9;
+	padding: 20px;
+	border: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: 1px 1px 10px #999;
+}
+
+.headImage {
+	text-align: center;
+}
+
+blockquote p {
+	font-family: Microsoft JhengHei;
+}
+
+.headImage img {
+	height: 120px;
+	width: 120px;
+	border-radius: 60px;
+}
+
+.headImage span {
+	display: block;
+	margin-top: 10px;
+	font-size: 18px;
+}
