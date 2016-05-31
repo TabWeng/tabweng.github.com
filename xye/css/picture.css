@@ -1,0 +1,88 @@
+/*导航*/
+#contents {
+  text-align: center;
+  background-color: #8e7437;
+}
+
+#contents a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 15px;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  font-family: Microsoft JhengHei;
+}
+
+#contents a:hover {
+  font-size: 16px;
+  padding: 0 8px;
+  opacity: 0.8;
+  background-color: #ad8b3d;
+}
+
+.page {
+  background-color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #999;
+}
+
+#xq-img img{
+  width: 100%;
+}
+
+.titleManger {
+  padding: 30px;
+  font-size: 24px;
+  font-family: Microsoft JhengHei;
+}
+
+img.mat {
+    -moz-box-sizing: border-box; box-sizing: border-box;
+    width: 100%; 
+    /*width: 300px; */
+    height: auto; 
+    display: block; 
+    padding: 10%;
+    background-color: #A67B5B; background-image: url(cardboard.jpg);
+    background-repeat: no-repeat; background-size: cover;
+    border: 6px double #483C32;
+    box-shadow: 0 0 0 50px rgba(244,240,236,0.4) inset,
+    0 0 0 11px rgb(180, 130, 90),
+    0 0 30px rgba(0,0,0,0.8) inset;
+    -webkit-box-shadow: 0 0 0 50px rgba(244,240,236,0.4) inset,
+    0 0 0 11px rgb(180, 130, 90),
+    0 0 30px rgba(0,0,0,0.8) inset,
+    0 30px 20px rgba(0,0,0,0.3);
+    outline: 2px solid #333; outline-offset: 0px;
+
+    cursor: pointer;
+} 
+
+.photo {
+  /*max-width: 360px;*/
+  padding: 15px 23px;
+}
+
+#imgContent {
+  -webkit-column-width: 360px;
+  -moz-column-width: 360px;
+}
+
+#photoTitle {
+  font-family: 华文楷体;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: url(../resource/sedona.jpg);
+  box-shadow: 0 0 10px #999;
+}
+
+#photoTitle p {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 0;
+}

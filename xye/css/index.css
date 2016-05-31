@@ -31,6 +31,9 @@
 /*个人简介*/
 #intro-head {
   font-size: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #EED8AE;
 }
 
 #intro-content {
@@ -110,3 +113,53 @@
 #image1-2 {
   float: right;
 }
+
+/*书信页面*/
+.letter-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.letter-body {
+  background-color: #fff;
+  box-shadow: 0 0 10px #ccc;
+}
+
+#letter th, td {
+  font-size: 16px;
+  color: #ad8b3d;
+}
+
+.table-hover>tbody>tr:hover {
+  background-color: #FAFAD2;
+}
+
+/*隐藏原始播放器*/
+.audio_letter {
+  display: none;
+}
+
+/*绘制播放器*/
+.musicPlayer {
+  background-color: #EEE8CD;
+  width: 300px;
+  height: 30px;
+  line-height: 10px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.musicPlayer .toPlay, .toPause {
+  font-size: 16px;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.state {
+  position: relative;
+  left: 20px;
+  font-size: 15px; 
+  font-family: Microsoft Jhenghei;
+}
+
+

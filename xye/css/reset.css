@@ -28,14 +28,17 @@ body {
 
 /*页脚*/
 .X-footer {
-	height: 60px;
-	background-color: #ccc;
+	margin-top: 40px;
+	height: 80px;
+	background-color: #D7BC81;
 	text-align: center;
-	line-height: 60px;
+	line-height: 80px;
 }
 
 .X-footer p {
 	margin-bottom: 0;
+	color: #5f3c23;
+	font-size: 20px;
 }
 
 /*清除浮动*/
@@ -54,4 +57,8 @@ body {
 
 .theUpHeight {
 	margin-top: 30px;
+}
+
+#bs-example-navbar-collapse-1 a {
+	font-size: 18px;
 }

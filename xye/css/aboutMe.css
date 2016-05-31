@@ -1,0 +1,53 @@
+#aboutMe-main {
+	padding: 30px;
+	background: url(../resource/eggshell.jpg);
+	margin-bottom: 20px;
+	box-shadow: 0 0 10px #999;
+}
+
+#aboutMe-main p {
+	font-size: 18px;
+}
+
+#aboutMeP {
+	text-align: center;
+	border-bottom: 2px solid #ccc;
+}
+
+.turnLeft {
+	display: inline-block;
+	float: left;
+	max-width: 200px;
+	margin-right: 10px;
+}
+
+.turnRight {
+	float: right;
+	max-width: 200px;
+	margin-left: 10px;
+}
+
+.imgTech {
+	width: 100%;
+}
+
+.techologyDiv {
+	margin-bottom: 20px;
+}
+
+.small-ptitle {
+	margin-top: 10px;
+	font-size: 26px !important;
+}
+
+.title-2 {
+	margin-bottom: 30px;
+}
+.title-2 h3 {
+	margin-bottom: 20px;
+}
+
+#name {
+	padding: 10px 0;
+	text-align: center;
+}

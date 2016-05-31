@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  <!-- 更好地支持IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 移动优先，自适应手机屏幕-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
 	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/recall.css">
+  <link rel="stylesheet" type="text/css" href="css/lib/music-main.css">
+  <link rel="stylesheet" type="text/css" href="css/lib/style.css">
+
 	<title>走进三毛</title>
 </head>
 <body>
@@ -26,7 +33,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">首页</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="aboutMe.html" target="_blank">关于作品</a></li>           
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -36,31 +44,184 @@
 
   <div class="row">
     <div id="contents" class="col-md-12">
-      <a href="writeStyle.html" target="_blank">写作风格</a>
-      <a href="comment.html" target="_blank">作品评论</a>
-      <a>生平经历</a>
-      <a>人物评价</a>
-      <a>经典语录</a>
-      <a href="faq.html" target="_blank">答毛迷问</a>
-      <a>追忆三毛</a>
-      <a>肖全故事</a>
-    </div>  
+      <a href="writeStyle.html" >写作风格</a>
+      <a href="comment.html" >作品评论</a>
+      <a href="aLifetime.html" >生平经历</a>
+      <a href="evaluate.html" >人物评价</a>
+      <a href="saying.html" >经典语录</a>
+      <a href="faq.html" >答毛迷问</a>
+      <a href="recall.html" >追忆三毛</a>
+      <a href="picture.html" >肖全故事</a>
+    </div>   
   </div>
 </div>
 
+<div class="container content">
+  <div class="row">
+
+<!-- 左边 -->
+<div class="col-md-4 left-4">
+
+<p class="video-title">三毛演讲</p>
+<!-- 音乐 -->
+<div class='jAudio--player audio-1'>
+
+  <audio></audio>
+
+  <div class='jAudio--ui'>
+
+    <div class='jAudio--thumb'></div>
+
+    <div class='jAudio--status-bar'>
+
+    <div class='jAudio--details'></div>
+    <div class='jAudio--volume-bar'></div>
+
+    <div class='jAudio--progress-bar'>
+      <div class='jAudio--progress-bar-wrapper'>
+      <div class='jAudio--progress-bar-played'>
+        <span class='jAudio--progress-bar-pointer'></span>
+      </div>
+      </div>
+    </div>
+
+    <div class='jAudio--time'>
+      <span class='jAudio--time-elapsed'>00:00</span>
+      <span class='jAudio--time-total'>00:00</span>
+    </div>
+
+    </div>
+
+  </div>
 
 
-<video width="602px" height="345px" controls="controls">
-<source src="http://v.qq.com/iframe/player.html?vid=d0163kxz8di&amp;width=500&amp;height=375&amp;auto=0" type="video/mp4"></source>
-your browser does not support the video tag
-</video> 
+  <div class='jAudio--playlist'>
+  </div>
+
+  <div class='jAudio--controls'>
+    <ul>
+    <li><button class='btn' data-action='prev' id='btn-prev'><span></span></button></li>
+    <li><button class='btn' data-action='play' id='btn-play'><span></span></button></li>
+    <li><button class='btn' data-action='next' id='btn-next'><span></span></button></li>
+    </ul>
+  </div>
+
+</div> <!--音乐-->
+
+
+</div>
+
+<!-- 右边 -->
+<div class="col-md-8">
+
+  <p class="video-title">追忆三毛 - 视频</p>
+  <div class="content-video">
+      <!-- 一个单元 -->
+      <div class="about-info clearFix about-info-head">
+        <!-- 文字描述 -->
+        <div class="col-md-7 about-word">
+          <p class="p-title">81年金钟奖颁奖时的三毛</p>
+          <p>
+            台湾电视金钟奖在每年10月或11月期间举行，是一年一度的台湾电视制作奖。它是成立于1965年，在台湾流通的第一个电视制作奖，相当于美国的艾美奖颁奖典礼。这也是台湾的三大年度奖项之一。1981年，三毛作为嘉宾受邀参与金钟奖的颁奖仪式，视频中三毛文质彬彬，礼貌谦逊，有很高的修养。这段视频，是大陆迄今能够观看到的三毛最完整的真实影像资料。一袭白裙，宛若沙漠中盛开的奇葩。感谢三毛，陪我们走过了青春时光。
+          </p>
+        </div>
+
+        <!-- 视频 -->
+        <div class="col-md-5 about-video">
+          <div class="embed-responsive embed-responsive-4by3">
+            <video controls="controls">
+            <source src="http://7xuovx.com1.z0.glb.clouddn.com/%E3%80%90%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AF%9B%E3%80%91%E3%80%90%E8%A7%86%E9%A2%91%E3%80%9181%E5%B9%B4%E9%87%91%E9%92%9F%E5%A5%96%E9%A2%81%E5%A5%96%E6%97%B6%E7%9A%84%E4%B8%89%E6%AF%9B.mp4" type="video/mp4" />
+          </video>
+          </div>
+        </div>  
+
+      </div>
+
+      <!-- 一个单元 -->
+      <div class="about-info clearFix">
+        <!-- 文字描述 -->
+        <div class="col-md-7 about-word">
+          <p class="p-title">三毛母亲的讲述</p>
+          <p>
+            三毛母亲对女儿的逝去很心痛，但是也很安慰，因为三毛有关心她的好朋友，三毛母亲希望三毛在天堂能快乐着。
+          </p>
+        </div>
+
+        <!-- 视频 -->
+        <div class="col-md-5 about-video">
+          <div class="embed-responsive embed-responsive-4by3">
+            <video controls="controls">
+            <source src="http://7xuovx.com1.z0.glb.clouddn.com/%E3%80%90%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AF%9B%E3%80%91%E3%80%90%E8%A7%86%E9%A2%91%E3%80%91%E4%B8%89%E6%AF%9B%E6%AF%8D%E4%BA%B2%E7%9A%84%E8%AE%B2%E8%BF%B0.mp4" type="video/mp4" />
+          </video>
+          </div>
+        </div>  
+
+      </div>
+
+      <!-- 一个单元 -->
+      <div class="about-info clearFix">
+        <!-- 文字描述 -->
+        <div class="col-md-7 about-word">
+          <p class="p-title">肖全谈三毛</p>
+          <p>
+            肖全说：我认为三毛是在“玩”人生。她去非洲生活，在那样的物质条件下，但凡有一点婆婆妈妈的心态肯定都是过不下 去的。但她转念一想“我是在享受苦难、体验艰辛”，就像是修行一样，这是要有很高的境界才行的。她把那些有意思的场景通过充满感情的文字表达出来，然后整 个台湾文艺界都疯狂了——从没有人感受过这样有激情的文字，一点都不做作。
+          </p>
+        </div>
+
+        <!-- 视频 -->
+        <div class="col-md-5 about-video">
+          <div class="embed-responsive embed-responsive-4by3">
+            <video controls="controls">
+            <source src="http://7xuovx.com1.z0.glb.clouddn.com/%E3%80%90%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AF%9B%E3%80%91%E3%80%90%E8%A7%86%E9%A2%91%E3%80%91%E8%82%96%E5%85%A8%E8%B0%88%E4%B8%89%E6%AF%9B.mp4" type="video/mp4" />
+          </video>
+          </div>
+        </div>  
+
+      </div>
+
+        <!-- 一个单元 -->
+      <div class="about-info clearFix about-info-end">
+        <!-- 文字描述 -->
+        <div class="col-md-7 about-word">
+          <p class="p-title">三毛去世当天台湾新闻报道</p>
+          <p>
+            1991年1月2日，她因子宫内膜肥厚，住进台湾荣民总医院，3日开刀完成手术。4日清晨，医院清洁女工进入7楼妇产科单人特等病房，打扫浴室的时候，看见坐厕旁点滴架的吊钩上，悬挂着三毛被尼龙丝袜吊颈的身体。她身着白底红花睡衣，现场没有任何遗书。法医推断三毛死亡的时间是凌晨2时。
+          </p>
+        </div>
+
+        <!-- 视频 -->
+        <div class="col-md-5 about-video">
+          <div class="embed-responsive embed-responsive-4by3">
+            <video controls="controls">
+            <source src="http://7xuovx.com1.z0.glb.clouddn.com/%E3%80%90%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AF%9B%E3%80%91%E3%80%90%E8%A7%86%E9%A2%91%E3%80%91%E4%B8%89%E6%AF%9B%E5%8E%BB%E4%B8%96%E5%BD%93%E5%A4%A9%E5%8F%B0%E6%B9%BE%E6%96%B0%E9%97%BB%E6%8A%A5%E9%81%93.mp4" type="video/mp4" />
+          </video>
+          </div>
+        </div>  
+      </div>
+    
+  </div>
+
+
+</div>
+
+  </div> <!-- row -->
+</div>
 
 
 <div class="X-footer">
-	<p>许忆儿的网页作品——走进三毛 | 关于我</p>	
+	<p>许忆儿的网页作品——走进三毛</p>	
 </div>
 
 <script src="js/lib/jquery-1.12.0.min.js" type="text/javascript"></script>	
 <script src="js/lib/bootstrap.min.js" type="text/javascript"></script>	
+<script src='js/lib/jaudio.js'></script>
+<script src="js/myResponsive.js" type="text/javascript"></script>
+
+<script src="js/lib/jquery-jplayer/jquery.jplayer.js" type="text/javascript"></script>
+<script src="js/lib/ttw-music-player.js" type="text/javascript"></script>
+<script src="js/recall.js" type="text/javascript"></script>
+<script src="js/recallSet.js" type="text/javascript"></script>
+
+
 </body>
 </html>
