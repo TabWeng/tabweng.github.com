@@ -162,4 +162,25 @@
   font-family: Microsoft Jhenghei;
 }
 
+#playMusic {
+  position: fixed;
+  background-color: #ad8b3d;
+  bottom: 108px;
+  left: 5px;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #ad8b3d;
 
+  -moz-transition: background-color 0.7s;
+  -webkit-transition: background-color 0.7s;
+  -moz-transition: color 0.7s;
+  -webkit-transition: color 0.7s;
+}
+
+#playMusic:hover {
+  background-color: #fff;  
+  color: #ad8b3d;
+}
