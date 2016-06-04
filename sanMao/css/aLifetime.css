@@ -1,0 +1,22 @@
+.inset-right {
+	float: right;
+	margin-left: 10px;
+	max-width: 300px;
+}
+
+.inset-left {
+	float: left;
+	margin-right: 10px;
+	max-width: 300px;
+}
+
+.div-life {
+	padding-bottom: 30px;
+}
+
+.p-title {
+	padding-bottom: 10px;
+	font-weight: 800;
+	font-size: 22px;
+	border-bottom: 2px solid #EAEAEA;
+}

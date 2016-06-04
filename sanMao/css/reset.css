@@ -1,0 +1,64 @@
+body {
+  background-image: url(images/eg_bg_04.gif);
+}
+
+/*页头样式设计*/
+.navbar-default {
+	margin-bottom: 0;	
+	background-color: #5f3c23; 
+	border: 0;
+	border-radius: 0;
+}
+
+.navbar-default a {
+	color: #d5c59f !important;
+}
+
+.navbar-default a:hover {
+	color: #fff !important;
+}
+
+.navbar-default button {
+	background-color:  #5f3c23 !important;
+}
+
+.navbar-default button:hover {
+	background-color: #d5c59f !important;
+}
+
+/*页脚*/
+.X-footer {
+	margin-top: 40px;
+	height: 80px;
+	background-color: #D7BC81;
+	text-align: center;
+	line-height: 80px;
+}
+
+.X-footer p {
+	margin-bottom: 0;
+	color: #5f3c23;
+	font-size: 20px;
+}
+
+/*清除浮动*/
+.clearFix:after{
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	line-height: 0;
+	content:"";
+}
+.clearFix{
+	zoom: 1;
+}
+
+.theUpHeight {
+	margin-top: 30px;
+}
+
+#bs-example-navbar-collapse-1 a {
+	font-size: 18px;
+}

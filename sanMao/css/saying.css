@@ -1,0 +1,31 @@
+#paperMain {
+	background: url("../resource/fawn.jpg");
+	padding: 30px;
+	box-shadow:  0 0 10px #999;
+	margin-bottom: 20px;
+}
+
+.paper {
+	border-bottom: 1px dashed #666;
+	padding: 20px 0;
+}
+
+.turnRigth {
+	text-align: right;
+}
+
+.paperContent {
+	font-family: 华文楷体;
+	font-size: 20px;
+}
+
+.paperContent-f {
+	font-family: Microsoft JhengHei;
+	font-size: 16px;	
+}
+
+#writer {
+	font-family: 华文楷体;
+	font-size: 24px;
+	margin-top:20px;
+}
