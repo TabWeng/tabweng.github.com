@@ -184,3 +184,12 @@
   background-color: #fff;  
   color: #ad8b3d;
 }
+
+#luYu {
+  cursor:pointer;
+}
+
+#luYu img{
+  width:100%; 
+}
+

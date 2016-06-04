@@ -14,7 +14,6 @@ $(function(){
 		}
 	});
 
-
 	var audio = document.getElementsByTagName('audio');
 
 	$(".ctrPlay").click(function(){

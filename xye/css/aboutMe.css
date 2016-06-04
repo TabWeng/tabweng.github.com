@@ -51,3 +51,30 @@
 	padding: 10px 0;
 	text-align: center;
 }
+
+.title-2 h3 {
+	text-align: center;
+}
+
+@font-face
+{
+	font-family: ybFont;
+	src: url('fonts/yb.ttf');
+	font-weight: bold;
+}
+
+p {
+	font-size: 25px !important;
+	font-family: ybFont;
+}
+
+h2 {
+	font-size: 35px;
+	font-family: ybFont;
+}
+
+h3 {
+	font-size: 28px;
+	font-family: ybFont;
+	color: red;
+}
