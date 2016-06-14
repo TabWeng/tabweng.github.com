@@ -1,0 +1,742 @@
+/*优化响应式*/
+@media screen and (max-width: 930px){
+	.zkyt-contents {
+		margin-right: 0px !important;
+	}
+	#imgLogo {
+		margin-left: 10px !important;
+	}
+}
+@media screen and (max-width: 768px){
+	.zkyt-contents ul {
+		position: static !important;
+		width: 100% !important;
+	}
+	.zkyt-servePage p:first-child {
+		font-size: 28px !important;
+	}
+	.zkyt-servePage p:last-child {
+		font-size: 16px !important;
+	}
+	#cooperation-1 h1{
+		font-size: 24px;
+	}
+	.zkyt-addWord h3 {
+		font-size: 20px !important;
+	}
+}
+
+
+
+/*头部图片*/
+.img-indexHead {
+	width: 100%;
+}
+
+/*导航条*/
+.zkyt-navbar {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-radius: 0;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#imgLogo {
+	margin-left: 89px;
+	margin-top: 9px;
+}
+
+.zkyt-contents > li:hover ul {
+	display: block;
+}
+
+.zkyt-contents > li > a{
+	color: #fff !important;
+	padding-bottom: 18px;
+	margin: 0 10px;
+	margin-bottom: 10px;
+}
+
+.zkyt-contents > li:hover > a {
+	color: #81C052 !important;
+	border-bottom: 1px solid #81C052;	
+}
+
+
+/*首页项*/
+.zkyt-contents > li:first-child > a {
+	color: #81C052 !important;
+	border-bottom: 1px solid #81C052;	
+}
+
+.zkyt-contents ul {
+	list-style: none;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	display: none;
+}
+
+.zkyt-contents ul > li > a{
+	display: inline-block;
+	padding: 12px 0;
+	padding-left: 20px;
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+	font-size: 14px;
+}
+
+.zkyt-contents ul > li > a:hover {
+	background-color: #81C052;
+}
+
+.zkyt-contents {
+	margin-right: 79px;
+	margin-top: 15px;
+	font-size: 16px;
+}
+
+/*中间的字体*/
+#p-indexHead {
+	width: 100%;
+	color: #fff;
+	font-size: 82px;
+	font-weight: 900;
+	position: absolute;
+	text-align: center;
+}
+
+#p-indexHead p {
+	margin-bottom: -8px;
+}
+
+/*动画设计*/
+#p-indexHead p:first-child {
+	animation: firstMove 0.6s ease-in;
+	-webkit-animation: firstMove 0.6s ease-in;
+	-moz-animation: firstMove 0.6s ease-in;
+	-o-animation: firstMove 0.6s ease-in;
+}
+
+#p-indexHead p:last-child {
+	animation: firstMoveTwo 0.9s ease-in;
+	-webkit-animation: firstMoveTwo 0.9s ease-in;
+	-moz-animation: firstMoveTwo 0.9s ease-in;
+	-o-animation: firstMoveTwo 0.9s ease-in;	
+}
+
+@keyframes firstMove {
+	0% {
+		opacity: 0;	
+	}
+	50% {
+		transform: translateY(-40px);
+		opacity: 0;	
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+@keyframes firstMoveTwo {
+	0%  {
+		opacity: 0;
+	}
+
+	60% {
+		transform: translateY(40px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+#p-indexHead span {
+	font-size: 1.3em;
+}
+
+/*第二个页面*/
+#p-indexHead-2 {
+	width: 100%;
+	color: #fff;
+	font-size: 48px;
+	font-weight: 900;
+	position: absolute;
+	text-align: center;
+}
+
+#p-indexHead-2 div {
+	color: #fff;
+	font-size: 34px;
+	font-weight: 900;
+}
+
+#p-indexHead-2 div:first-child {
+	display: inline-block;
+	text-align: left;
+	position: relative;
+}
+
+#p-indexHead-2 div:first-child span {
+	text-align: right;
+}
+
+#p-indexHead-2 div:first-child p {
+	margin-bottom: 0.2em;
+}
+
+/*第二个页面动画设计*/
+#p-indexHead-2 div:first-child p:nth-child(1) {
+	animation: secondMoveleft 0.8s linear; 
+	-webkit-animation: secondMoveleft 0.8s linear;
+	-moz-animation: secondMoveleft 0.8s linear;
+	-o-animation: secondMoveleft 0.8s linear;
+}
+#p-indexHead-2 div:first-child p:nth-child(1) span {
+	animation: secondMoveleftSpan 1s linear;
+	-webkit-animation: secondMoveleftSpan 1s linear;
+	-moz-animation: secondMoveleftSpan 1s linear;
+	-o-animation: secondMoveleftSpan 1s linear;
+}
+
+@keyframes secondMoveleft {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		transform: translateX(-40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}
+}
+@keyframes secondMoveleftSpan {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		transform: translateX(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}	
+}
+
+#p-indexHead-2 div:first-child p:nth-child(2) {
+	animation: secondMoveleft2 1.2s linear;
+	-webkit-animation: secondMoveleft2 1.2s linear;
+	-moz-animation: secondMoveleft2 1.2s linear;
+	-o-animation: secondMoveleft2 1.2s linear;
+}
+#p-indexHead-2 div:first-child p:nth-child(2) span {
+	animation: secondMoveleftSpan2 1.4s linear;
+	-webkit-animation: secondMoveleftSpan2 1.4s linear;
+	-moz-animation: secondMoveleftSpan2 1.4s linear;
+	-o-animation: secondMoveleftSpan2 1.4s linear;
+}
+
+@keyframes secondMoveleft2 {
+	0% {
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(-40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}
+}
+@keyframes secondMoveleftSpan2 {
+	0% {
+		opacity: 0;
+	}
+	70% {
+		transform: translateX(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}	
+}
+
+#p-indexHead-2 div:first-child p:nth-child(3) {
+	animation: secondMoveleft3 1.6s linear;
+	-webkit-animation: secondMoveleft3 1.6s linear;
+	-moz-animation: secondMoveleft3 1.6s linear;
+	-o-animation: secondMoveleft3 1.6s linear;
+}
+#p-indexHead-2 div:first-child p:nth-child(3) span {
+	animation: secondMoveleftSpan3 1.8s linear;
+	-webkit-animation: secondMoveleftSpan3 1.8s linear;
+	-moz-animation: secondMoveleftSpan3 1.8s linear;
+	-o-animation: secondMoveleftSpan3 1.8s linear;
+}
+
+@keyframes secondMoveleft3 {
+	0% {
+		opacity: 0;
+	}
+	75% {
+		transform: translateX(-40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}
+}
+@keyframes secondMoveleftSpan3 {
+	0% {
+		opacity: 0;
+	}
+	80% {
+		transform: translateX(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}	
+}
+
+
+#p-indexHead-2 div:last-child {
+	display: inline-block;
+}
+
+#p-indexHead-2 div:last-child p {
+	display: inline-block;
+}
+
+/*控制右边字体的位置*/
+#p-indexHead-2 div:last-child p:first-child {
+	position: relative;
+	right: -10px;
+	animation: secondMovedown 2.1s linear;
+	-webkit-animation: secondMovedown 2.1s linear;
+	-moz-animation: secondMovedown 2.1s linear;
+	-o-animation: secondMovedown 2.1s linear;
+}
+@keyframes secondMovedown {
+	0% {
+		opacity: 0;
+	}
+	80% {
+		transform: translateY(-40px);
+		opacity: 0;
+	}
+	90% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
+#p-indexHead-2 div:last-child p:last-child {
+	position: relative;
+	font-weight: 900;
+	font-family: Impact;
+
+	animation: secondMovedown2 2.2s linear;
+	-webkit-animation: secondMovedown2 2.2s linear;
+	-moz-animation: secondMovedown2 2.2s linear;
+	-o-animation: secondMovedown2 2.2s linear;	
+}
+@keyframes secondMovedown2 {
+	0% {
+		opacity: 0;
+	}
+	80% {
+		transform: translateX(40px);
+		opacity: 0;
+	}
+	90% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+#p-indexHead-2 div span{
+	display: block;
+	font-size: 0.4em;
+}
+
+#p-indexHead-2 img {
+	width: 3.5em;
+	height: auto;
+}
+
+/*清除浮动*/
+.clearFix:after{
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	line-height: 0;
+	content:"";
+}
+.clearFix{
+	zoom: 1;
+}
+
+#span-down {
+	text-align: center;
+}
+
+#span-down span{
+	position: absolute;
+	color: #fff;
+	font-size: 2em;
+	left: 50%;
+
+	margin: 0 auto;
+	animation: spanFlash 1.5s linear infinite;
+	-webkit-animation: spanFlash 1.5s linear infinite;
+	-moz-animation: spanFlash 1.5s linear infinite;
+	-o-animation: spanFlash 1.5s linear infinite;
+}
+
+@keyframes spanFlash {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/*重写圆点距离代码*/
+.carousel-indicators li{
+	position: relative;
+	left: 1em;
+}
+
+/********************************
+服务项目
+********************************/
+.zkyt-servePage {
+	background-color: #fff;
+	text-align: center;
+	margin-top: 60px;
+}
+
+.zkyt-servePage p:first-child {
+	font-size: 38px;
+}
+.zkyt-servePage p:first-child strong {
+	font-size: 60px;
+	font-weight: 900;
+	color: #5FB336;
+}
+.zkyt-servePage p:last-child {
+	font-size: 20px;
+	color: #666;
+}
+
+.zkyt-line {
+	height: 1px;
+	border-top: 1px solid #ddd;
+	text-align: center;
+	margin: 40px 0;
+}
+
+.zkyt-line span{
+	background-color: #fff;
+	padding: 0 20px;
+	position: relative;
+	top: -8px;
+	color: #ddd;
+}
+
+/*服务品质*/
+.zkyt-quality {
+	text-align: center;
+}
+
+.zkyt-quality div{
+	margin-bottom: 40px;
+}
+
+.zkyt-quality strong {
+	display: inline-block;
+	font-size: 26px;
+	font-weight: 500;
+	margin: 10px 0;
+}
+
+.zkyt-quality div:nth-child(1) span{
+	display: block;
+	background-image: url(images/pg1.png);
+	background-position: 0 0;
+	width: 71px;
+	height: 74px;
+	margin: 0 auto;
+}
+
+.zkyt-quality div:nth-child(2) span{
+	display: block;
+	background-image: url(images/pg1.png);
+	background-position: -273px 0;
+	width: 60px;
+	height: 74px;
+	margin: 0 auto;
+}
+
+.zkyt-quality div:nth-child(3) span{
+	display: block;
+	background-image: url(images/pg1.png);
+	background-position: -531px 0;
+	width: 75px;
+	height: 74px;
+	margin: 0 auto;
+}
+
+.zkyt-quality div:nth-child(4) span{
+	display: block;
+	background-image: url(images/pg1.png);
+	background-position: -796px 0;
+	width: 75px;
+	height: 74px;
+	margin: 0 auto;
+}
+
+/*服务项目*/
+.zkyt-project {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#project-h {
+	text-align: center;
+	font-size: 48px;
+	color: #5FB336;	
+	margin: 40px 0 60px;
+}
+
+#project1 {
+	background-position: 0 0;
+}
+#project2 {
+	background-position: -387px 0;	
+}
+#project3 {
+	background-position: -772px 0;
+}
+#project4 {
+	background-position: 0 -308px;
+}
+#project5 {
+	background-position: -387px -308px;
+}
+#project6 {
+	background-position: -772px -308px;
+}
+
+.zkyt-projectContent {
+	margin: 0 auto;
+}
+
+.zkyt-projectContent div{
+	background-image: url(images/case-pic.jpg);
+	width: 294px;
+	height: 273px;
+	padding: 0;
+	margin: 0 auto 30px;
+
+}
+
+.zkyt-projectContent p:first-child{
+	padding: 10px;
+	font-size: 16px;
+	height: 210px;
+	color: #f8f8f8;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 8px 8px 0 0;
+	opacity: 0;
+	cursor: pointer;
+
+	transition: opacity 0.5s;
+}
+
+.zkyt-projectContent p:first-child:hover {
+	opacity: 1;
+}
+
+.zkyt-projectContent p:last-child {
+	text-align: center;
+	padding-top: 5px;
+	font-size: 25px;
+	color: #fff;
+}
+
+.zkyt-addWord {
+	text-align: center;
+}
+.zkyt-addWord h3 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+}
+.zkyt-addWord span {
+	display: inline-block;
+	background-image: url(images/pg1.png);
+	background-position: -267px -204px;
+	width: 174px;
+	height: 54px;
+	margin: 40px 0 60px 0;
+	cursor: pointer;
+}
+
+/*合作企业*/
+#cooperation {
+	background-image: url(images/huoban.png);
+	background-size: auto 100%;
+	background-position: center;
+}
+
+#cooperation-1 {
+	padding-bottom: 40px;
+}
+
+#cooperation-1 h1{
+	text-align: center;
+	color: #fff;
+	margin-top: 70px;
+}
+
+#cooperation-1>div {
+	text-align: center;
+	margin: 30px 0;
+}
+
+#cooperation-1 span {
+	margin: 0 10px;
+	position: relative;
+	top: 5px;
+	color: #ddd;
+}
+
+.zkyt-myLine {
+	display: inline-block;
+	border-top: 1px solid #000;
+	width: 40%;
+	border-color: #ddd;
+}
+
+#cooperationImage {
+	background-image: url(images/list2.png);
+	width: 80%;
+	height: 260px;
+	margin: 0 auto;
+	overflow: auto;
+	display: inline-block;
+}
+
+#cooperation-1 div:last-child span {
+	position: relative;
+	top: -130px;
+	cursor: pointer;
+}
+#cooperation-1 div:last-child span:hover {
+	color: #5FB336;
+}
+
+#callForUs {
+	background-color: #5FB336;
+}
+
+#callUs {
+	padding-top: 30px;
+	color: #fff;
+}
+
+#callUs div {
+	margin-bottom: 30px;
+}
+
+#callUs h1 {
+	margin-bottom: 20px;
+	
+} 
+
+/*其他*/
+#others {
+	background-color: #1A1A1A;
+	color: #808080;
+	padding: 50px 0;
+}
+
+#others a {
+	color: #808080;
+}
+
+#others-new a {
+	display: block;
+	border-bottom: 1px solid #3F3F3F;
+	padding: 15px 0 10px 0;
+	text-decoration: none;
+}
+
+#others h2 {
+	color: #BBBBBB;
+}
+
+#others-friends a {
+	display: inline-block;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+
+#others-findUs ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#others-findUs li {
+	margin-bottom: 13px;
+}
+
+.zkyt-footer {
+	background-color: #222222;
+	padding: 20px;
+}
+
+.zkyt-footer footer{
+	color: #666;
+}
+.zkyt-footer footer a {
+	color: #666;
+	margin-right: 15px;
+}
+
+#record {
+	color: #808080;
+}
+
