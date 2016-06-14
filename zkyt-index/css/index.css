@@ -149,7 +149,35 @@
 		opacity: 1;
 	}
 }
+@-webkit-keyframes firstMove {
+	0% {
+		opacity: 0;	
+	}
+	50% {
+		transform: translateY(-40px);
+		opacity: 0;	
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
 @keyframes firstMoveTwo {
+	0%  {
+		opacity: 0;
+	}
+
+	60% {
+		transform: translateY(40px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+@-webkit-keyframes firstMoveTwo {
 	0%  {
 		opacity: 0;
 	}
@@ -226,6 +254,19 @@
 			opacity: 1;
 	}
 }
+@-webkit-keyframes secondMoveleft {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		transform: translateX(-40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}
+}
 @keyframes secondMoveleftSpan {
 	0% {
 		opacity: 0;
@@ -239,7 +280,19 @@
 			opacity: 1;
 	}	
 }
-
+@-webkit-keyframes secondMoveleftSpan {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		transform: translateX(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}	
+}
 #p-indexHead-2 div:first-child p:nth-child(2) {
 	animation: secondMoveleft2 1.2s linear;
 	-webkit-animation: secondMoveleft2 1.2s linear;
@@ -266,7 +319,33 @@
 			opacity: 1;
 	}
 }
+@-webkit-keyframes secondMoveleft2 {
+	0% {
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(-40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}
+}
 @keyframes secondMoveleftSpan2 {
+	0% {
+		opacity: 0;
+	}
+	70% {
+		transform: translateX(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}	
+}
+@-webkit-keyframes secondMoveleftSpan2 {
 	0% {
 		opacity: 0;
 	}
@@ -306,7 +385,33 @@
 			opacity: 1;
 	}
 }
+@-webkit-keyframes secondMoveleft3 {
+	0% {
+		opacity: 0;
+	}
+	75% {
+		transform: translateX(-40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}
+}
 @keyframes secondMoveleftSpan3 {
+	0% {
+		opacity: 0;
+	}
+	80% {
+		transform: translateX(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+			opacity: 1;
+	}	
+}
+@-webkit-keyframes secondMoveleftSpan3 {
 	0% {
 		opacity: 0;
 	}
@@ -351,7 +456,19 @@
 		opacity: 1;
 	}
 }
-
+@-webkit-keyframes secondMovedown {
+	0% {
+		opacity: 0;
+	}
+	80% {
+		transform: translateY(-40px);
+		opacity: 0;
+	}
+	90% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
 
 #p-indexHead-2 div:last-child p:last-child {
 	position: relative;
@@ -376,7 +493,19 @@
 		opacity: 1;
 	}
 }
-
+@-webkit-keyframes secondMovedown2 {
+	0% {
+		opacity: 0;
+	}
+	80% {
+		transform: translateX(40px);
+		opacity: 0;
+	}
+	90% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
 #p-indexHead-2 div span{
 	display: block;
 	font-size: 0.4em;
@@ -432,7 +561,20 @@
 		opacity: 0;
 	}
 }
-
+@-webkit-keyframes spanFlash {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 /*重写圆点距离代码*/
 .carousel-indicators li{
 	position: relative;
