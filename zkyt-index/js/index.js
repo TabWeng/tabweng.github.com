@@ -21,6 +21,10 @@ function setHeadPic(){
 	$(".img-indexHead").css("height", getWindowHeight + "px");
 }
 
+/*************
+*函数名：setHeadWord
+*功能：控制页首字体的响应式大小
+*************/
 function setHeadWord(){
 
 	var getWindowHeight = $(window).height();
@@ -43,6 +47,10 @@ function setHeadWord(){
 
 }
 
+/*************
+*函数名：turnCooperation
+*功能：控制合作伙伴左右滑动
+*************/
 function turnCooperation(){
 	$("#turnRight").click(function(){
 		$("#cooperationImage").animate({"background-position": "-=220px"});
