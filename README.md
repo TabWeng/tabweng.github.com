@@ -1,6 +1,8 @@
 Presentation of works
 =====================
-提示：github图片加载比较缓慢，由于为个人设计作品，图片为原图并未经过压缩处理，可以点击下列链接查看作品
+###提示：
+1. 下列网页都为个人独立设计完成，支持响应式
+2. github图片加载比较缓慢，可以点击下列链接查看作品
 </br>
 + <a href="https://tabweng.github.io/zkyt-index/index.html" target="_blank">深圳市中科研拓  [点击进入]</a>
 </br>
