@@ -329,6 +329,27 @@ canvas.addEventListener( 'mouseup', function( e ) {
 	mousedown = false;
 });
 
+//手机
+
+// toggle mousedown state and prevent canvas from being selected
+canvas.addEventListener( 'touchstart', function( e ) {
+	
+	if (e.targetTouches.length == 1) {
+		e.preventDefault();// 阻止浏览器默认事件，重要
+		var touch = e.targetTouches[0];
+		// 把元素放在手指所在的位置
+			mx = touch.pageX - canvas.offsetLeft;
+			my = touch.pageY - canvas.offsetTop;
+			mousedown = true;
+	} 
+	
+});
+
+canvas.addEventListener( 'touchend', function( e ) {
+	e.preventDefault();
+	mousedown = false;
+});
+
 // once the window loads, we are ready for some fireworks!
 window.onload = loop;
 </script>
